@@ -34,13 +34,12 @@ public class JiraProcessTest {
   private static final BpmProcess createIssueTestProcess = BpmProcess.path("Test Processes/TestCreateIssue");
   
   @Test
-  @Disabled
   public void callProcess(BpmClient bpmClient){
     BpmElement startable = createIssueTestProcess.elementName("startCreateIssue.ivp");
     ExecutionResult result = bpmClient.start().process(startable).execute();
     CompositeObject data = result.data().last();
-    com.axon.market.jira.connector.demo.Data demoData = (com.axon.market.jira.connector.demo.Data) data;
-    String createdIssueKey = demoData.getIssueParent().getKey();
+    com.axon.market.jira.connector.test.Data testData = (com.axon.market.jira.connector.test.Data) data;
+    String createdIssueKey = testData.getIssueParent().getKey();
     assertThat(createdIssueKey).isNotEmpty();
   }
   

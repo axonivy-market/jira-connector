@@ -36,12 +36,12 @@ Te0 f1 553 49 30 30 0 15 #rect
 Te0 f3 actionTable 'out=in;
 ' #txt
 Te0 f3 actionCode 'import com.axon.market.jira.connector.models.IssueParent;
-IssueParent ip = new IssueParent();
+in.issueParent = new IssueParent();
 
-ip.fields.project.projKey = "FRXITTEST";
-ip.fields.issuetype.name = "Task";
-ip.fields.summary = "Test summary";
-ip.fields.description = "Test description";' #txt
+in.issueParent.fields.project.projKey = "FRXITTEST";
+in.issueParent.fields.issuetype.name = "Task";
+in.issueParent.fields.summary = "Test summary";
+in.issueParent.fields.description = "Test description";' #txt
 Te0 f3 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
