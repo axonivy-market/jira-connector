@@ -1,0 +1,4 @@
+ShowIssueData #class
+com.axon.market.jira.connector.demo.ShowIssue #namespace
+issueParent com.axon.market.jira.connector.models.IssueParent #field
+issueParent PERSISTENT #fieldModifier

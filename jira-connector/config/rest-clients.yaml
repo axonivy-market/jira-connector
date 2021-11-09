@@ -1,0 +1,10 @@
+RestClients:
+  Jira:
+    UUID: a5b21baf-2b4f-44ac-a9e7-9c1b0607e0a6
+    Url: https://jira.frox.com/rest/api/2
+    Icon: res:/webContent/icons/jira.png
+    Features:
+    - ch.ivyteam.ivy.rest.client.mapper.JsonFeature
+    - ch.ivyteam.ivy.rest.client.authentication.HttpBasicAuthenticationFeature
+    Properties:
+      username: fcosti

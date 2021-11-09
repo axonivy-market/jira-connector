@@ -1,0 +1,4 @@
+ch.ivyteam.ivy.designer.preferences.DataClassPreferencePage\:DEFAULT_DATA_CLASS=com.axon.market.jira.connector.Data
+ch.ivyteam.ivy.designer.preferences.DataClassPreferencePage\:DEFAULT_NAMESPACE=com.axon.market.jira.connector
+ch.ivyteam.ivy.project.preferences\:PROJECT_VERSION=93800
+eclipse.preferences.version=1

@@ -1,0 +1,4 @@
+KeyInputData #class
+com.axon.market.jira.connector.demo.KeyInput #namespace
+key String #field
+key PERSISTENT #fieldModifier

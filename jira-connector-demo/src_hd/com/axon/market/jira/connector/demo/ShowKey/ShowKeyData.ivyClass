@@ -1,0 +1,4 @@
+ShowKeyData #class
+com.axon.market.jira.connector.demo.ShowKey #namespace
+key String #field
+key PERSISTENT #fieldModifier

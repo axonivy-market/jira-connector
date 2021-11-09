@@ -1,0 +1,6 @@
+CreateCommentData #class
+com.axon.market.jira.connector.demo.CreateComment #namespace
+key String #field
+key PERSISTENT #fieldModifier
+comment String #field
+comment PERSISTENT #fieldModifier

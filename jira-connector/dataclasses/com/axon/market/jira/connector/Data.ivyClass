@@ -1,0 +1,8 @@
+Data #class
+com.axon.market.jira.connector #namespace
+issueParent com.axon.market.jira.connector.models.IssueParent #field
+issueParent PERSISTENT #fieldModifier
+comment String #field
+comment PERSISTENT #fieldModifier
+jsonString String #field
+jsonString PERSISTENT #fieldModifier
