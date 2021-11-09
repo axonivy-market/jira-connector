@@ -9,6 +9,12 @@
   <dependencies>
     <dependency>
       <groupId>com.axon.market</groupId>
+      <artifactId>jira-connector-demo</artifactId>
+      <version>${project.version}</version>
+      <type>iar</type>
+    </dependency>
+    <dependency>
+      <groupId>com.axon.market</groupId>
       <artifactId>jira-connector</artifactId>
       <version>${project.version}</version>
       <type>iar</type>
@@ -18,12 +24,6 @@
       <artifactId>unit-tester</artifactId>
       <version>9.2.0</version>
       <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.axon.market</groupId>
-      <artifactId>jira-connector-demo</artifactId>
-      <version>${project.version}</version>
-      <type>iar</type>
     </dependency>
   </dependencies>
   <build>
