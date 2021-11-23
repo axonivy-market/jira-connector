@@ -7,4 +7,5 @@ RestClients:
     - ch.ivyteam.ivy.rest.client.mapper.JsonFeature
     - ch.ivyteam.ivy.rest.client.authentication.HttpBasicAuthenticationFeature
     Properties:
-      username: fcosti
+      username: TBD
+      password: ${decrypt:\u00AC\u006A\u0001\u00A5\u0019\u007C\u00C1\u005C\u0071\u00D0\u0059\u00F6\u002F\u0094\u00C0\u00C9\u00BE\u0028\u00F0\u00B6\u0030\u00D2\u00DC\u00ED\u004A\u00E4\u005C\u00D4\u008D\u0005\u00E8\u007B}
