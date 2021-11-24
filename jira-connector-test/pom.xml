@@ -32,10 +32,9 @@
       <plugin>
         <groupId>com.axonivy.ivy.ci</groupId>
         <artifactId>project-build-plugin</artifactId>
-        <version>9.2.2</version>
+        <version>9.3.1</version>
         <extensions>true</extensions>
         <configuration>
-          <ivyVersion>9.3.0</ivyVersion>
           <engineListPageUrl>https://developer.axonivy.com/download/archive/unstable</engineListPageUrl>
         </configuration>
       </plugin>
