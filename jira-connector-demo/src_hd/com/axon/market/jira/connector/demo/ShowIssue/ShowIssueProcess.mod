@@ -17,8 +17,8 @@ Ss0 @UdExitEnd f4 '' #zField
 Ss0 @PushWFArc f5 '' #zField
 >Proto Ss0 Ss0 ShowIssueProcess #zField
 Ss0 f0 guid 17CFEC37FDC191F2 #txt
-Ss0 f0 method start(com.axon.market.jira.connector.models.IssueParent) #txt
-Ss0 f0 inParameterDecl '<com.axon.market.jira.connector.models.IssueParent issueParent> param;' #txt
+Ss0 f0 method start(com.axonivy.connector.jira.models.IssueParent) #txt
+Ss0 f0 inParameterDecl '<com.axonivy.connector.jira.models.IssueParent issueParent> param;' #txt
 Ss0 f0 inParameterMapAction 'out.issueParent=param.issueParent;
 ' #txt
 Ss0 f0 outParameterDecl '<> result;' #txt

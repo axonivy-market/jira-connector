@@ -19,9 +19,9 @@ Cs0 @PushWFArc f5 '' #zField
 Cs0 f0 guid 17CFE8A85E3686E6 #txt
 Cs0 f0 method start() #txt
 Cs0 f0 inParameterDecl '<> param;' #txt
-Cs0 f0 inParameterMapAction 'out.issueParent=new com.axon.market.jira.connector.models.IssueParent();;
+Cs0 f0 inParameterMapAction 'out.issueParent=new com.axonivy.connector.jira.models.IssueParent();
 ' #txt
-Cs0 f0 outParameterDecl '<com.axon.market.jira.connector.models.IssueParent issueParent> result;' #txt
+Cs0 f0 outParameterDecl '<com.axonivy.connector.jira.models.IssueParent issueParent> result;' #txt
 Cs0 f0 outParameterMapAction 'result.issueParent=in.issueParent;
 ' #txt
 Cs0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -31,9 +31,9 @@ Cs0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-Cs0 f0 83 51 26 26 -16 15 #rect
+Cs0 f0 84 52 24 24 -16 15 #rect
 Cs0 f1 211 51 26 26 0 12 #rect
-Cs0 f2 109 64 211 64 #arcP
+Cs0 f2 108 64 211 64 #arcP
 Cs0 f3 guid 17CFE8A85E8A28D0 #txt
 Cs0 f3 actionTable 'out=in;
 ' #txt

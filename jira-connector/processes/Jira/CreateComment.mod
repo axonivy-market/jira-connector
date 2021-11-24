@@ -36,7 +36,7 @@ Ct0 f3 templateParams 'key=in.issueParent.key;
 ' #txt
 Ct0 f3 method POST #txt
 Ct0 f3 bodyInputType ENTITY #txt
-Ct0 f3 bodyObjectType com.axon.market.jira.connector.models.Comment #txt
+Ct0 f3 bodyObjectType com.axonivy.connector.jira.models.Comment #txt
 Ct0 f3 bodyObjectMapping 'param.body=in.comment;
 ' #txt
 Ct0 f3 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -49,7 +49,7 @@ Ct0 f3 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 Ct0 f3 168 42 112 44 -47 -8 #rect
 Ct0 f4 111 64 168 64 #arcP
 Ct0 f2 280 64 337 64 #arcP
->Proto Ct0 .type com.axon.market.jira.connector.Data #txt
+>Proto Ct0 .type com.axonivy.connector.jira.Data #txt
 >Proto Ct0 .processKind CALLABLE_SUB #txt
 >Proto Ct0 0 0 32 24 18 0 #rect
 >Proto Ct0 @|BIcon #fIcon

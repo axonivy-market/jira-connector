@@ -21,7 +21,7 @@ out.issueParent.fields.issuetype.name=param.issueType;
 out.issueParent.fields.project.projKey=param.projectKey;
 out.issueParent.fields.summary=param.summary;
 ' #txt
-Ce0 f0 outParamDecl '<com.axon.market.jira.connector.models.IssueParent issueParent> result;' #txt
+Ce0 f0 outParamDecl '<com.axonivy.connector.jira.models.IssueParent issueParent> result;' #txt
 Ce0 f0 outParamTable 'result.issueParent=in.issueParent;
 ' #txt
 Ce0 f0 callSignature call(String,String,String,String) #txt
@@ -38,10 +38,10 @@ Ce0 f3 clientId a5b21baf-2b4f-44ac-a9e7-9c1b0607e0a6 #txt
 Ce0 f3 path /issue/ #txt
 Ce0 f3 method POST #txt
 Ce0 f3 bodyInputType ENTITY #txt
-Ce0 f3 bodyObjectType com.axon.market.jira.connector.models.IssueParent #txt
+Ce0 f3 bodyObjectType com.axonivy.connector.jira.models.IssueParent #txt
 Ce0 f3 bodyObjectMapping 'param=in.issueParent;
 ' #txt
-Ce0 f3 resultType com.axon.market.jira.connector.models.IssueParent #txt
+Ce0 f3 resultType com.axonivy.connector.jira.models.IssueParent #txt
 Ce0 f3 responseMapping 'out.issueParent.key=result.key;
 ' #txt
 Ce0 f3 clientErrorCode ivy:error:rest:client #txt
@@ -56,7 +56,7 @@ Ce0 f3 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 Ce0 f3 168 42 112 44 -35 -8 #rect
 Ce0 f4 111 64 168 64 #arcP
 Ce0 f2 280 64 337 64 #arcP
->Proto Ce0 .type com.axon.market.jira.connector.Data #txt
+>Proto Ce0 .type com.axonivy.connector.jira.Data #txt
 >Proto Ce0 .processKind CALLABLE_SUB #txt
 >Proto Ce0 0 0 32 24 18 0 #rect
 >Proto Ce0 @|BIcon #fIcon

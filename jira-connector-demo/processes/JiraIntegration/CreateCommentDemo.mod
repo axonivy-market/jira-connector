@@ -68,7 +68,7 @@ Co0 f2 320 42 128 44 -57 -8 #rect
 Co0 f2 res:/webContent/icons/jira.png #fDecoratorIcon
 Co0 f5 280 64 320 64 #arcP
 Co0 f6 448 64 497 64 #arcP
->Proto Co0 .type com.axon.market.jira.connector.demo.Data #txt
+>Proto Co0 .type com.axonivy.connector.jira.demo.Data #txt
 >Proto Co0 .processKind NORMAL #txt
 >Proto Co0 0 0 32 24 18 0 #rect
 >Proto Co0 @|BIcon #fIcon

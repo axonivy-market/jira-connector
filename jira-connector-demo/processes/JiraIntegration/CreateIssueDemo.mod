@@ -88,7 +88,7 @@ Co0 f7 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 Co0 f7 496 42 112 44 -25 -8 #rect
 Co0 f8 440 64 496 64 #arcP
 Co0 f2 608 64 657 64 #arcP
->Proto Co0 .type com.axon.market.jira.connector.demo.Data #txt
+>Proto Co0 .type com.axonivy.connector.jira.demo.Data #txt
 >Proto Co0 .processKind NORMAL #txt
 >Proto Co0 0 0 32 24 18 0 #rect
 >Proto Co0 @|BIcon #fIcon

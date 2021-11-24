@@ -35,7 +35,8 @@ Te0 f0 81 49 30 30 -21 17 #rect
 Te0 f1 553 49 30 30 0 15 #rect
 Te0 f3 actionTable 'out=in;
 ' #txt
-Te0 f3 actionCode 'import com.axon.market.jira.connector.models.IssueParent;
+Te0 f3 actionCode 'import com.axonivy.connector.jira.models.IssueParent;
+
 in.issueParent = new IssueParent();
 
 in.issueParent.fields.project.projKey = "FRXITTEST";
@@ -72,7 +73,7 @@ Te0 f5 384 42 112 44 -45 -8 #rect
 Te0 f5 res:/webContent/icons/jira.png #fDecoratorIcon
 Te0 f6 344 64 384 64 #arcP
 Te0 f2 496 64 553 64 #arcP
->Proto Te0 .type com.axon.market.jira.connector.test.Data #txt
+>Proto Te0 .type com.axonivy.connector.jira.test.Data #txt
 >Proto Te0 .processKind NORMAL #txt
 >Proto Te0 0 0 32 24 18 0 #rect
 >Proto Te0 @|BIcon #fIcon

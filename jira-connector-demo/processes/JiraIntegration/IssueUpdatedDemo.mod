@@ -54,8 +54,8 @@ Io0 f3 168 42 112 44 -36 -8 #rect
 Io0 f3 res:/webContent/icons/jira.png #fDecoratorIcon
 Io0 f4 111 64 168 64 #arcP
 Io0 f5 dialogId com.axon.market.jira.connector.demo.ShowIssue #txt
-Io0 f5 startMethod start(com.axon.market.jira.connector.models.IssueParent) #txt
-Io0 f5 requestActionDecl '<com.axon.market.jira.connector.models.IssueParent issueParent> param;' #txt
+Io0 f5 startMethod start(com.axonivy.connector.jira.models.IssueParent) #txt
+Io0 f5 requestActionDecl '<com.axonivy.connector.jira.models.IssueParent issueParent> param;' #txt
 Io0 f5 requestMappingAction 'param.issueParent=in.issueParent;
 ' #txt
 Io0 f5 responseMappingAction 'out=in;
@@ -74,7 +74,7 @@ Io0 f5 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 Io0 f5 328 42 112 44 -31 -8 #rect
 Io0 f6 280 64 328 64 #arcP
 Io0 f2 440 64 497 64 #arcP
->Proto Io0 .type com.axon.market.jira.connector.demo.Data #txt
+>Proto Io0 .type com.axonivy.connector.jira.demo.Data #txt
 >Proto Io0 .processKind NORMAL #txt
 >Proto Io0 0 0 32 24 18 0 #rect
 >Proto Io0 @|BIcon #fIcon
