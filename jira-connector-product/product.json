@@ -5,7 +5,7 @@
 			"data": {
 				"projects": [
 					{
-						"groupId": "com.axonivy.market",
+						"groupId": "com.axonivy.connector.jira",
 						"artifactId": "jira-connector-demo",
 						"version": "${version}",
 						"type": "iar"
@@ -27,7 +27,7 @@
 			"data": {
 				"dependencies": [
 					{
-						"groupId": "com.axonivy.market",
+						"groupId": "com.axonivy.connector.jira",
 						"artifactId": "jira-connector",
 						"version": "${version}",
 						"type": "iar"
