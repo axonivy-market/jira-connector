@@ -26,6 +26,7 @@ Co0 f0 triggerEnabled false #txt
 Co0 f0 callSignature start() #txt
 Co0 f0 startName 'Demo: Create Jira Issue' #txt
 Co0 f0 caseData businessCase.attach=true #txt
+Co0 f0 @CG|tags demo #txt
 Co0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
