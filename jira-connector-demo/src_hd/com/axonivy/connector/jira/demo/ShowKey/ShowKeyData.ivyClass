@@ -1,4 +1,4 @@
 ShowKeyData #class
-com.axon.market.jira.connector.demo.ShowKey #namespace
+com.axonivy.connector.jira.demo.ShowKey #namespace
 key String #field
 key PERSISTENT #fieldModifier

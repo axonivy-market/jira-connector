@@ -46,7 +46,7 @@ Cs0 f3 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 Cs0 f3 83 147 26 26 -15 15 #rect
 Cs0 f4 211 147 26 26 0 12 #rect
 Cs0 f5 109 160 211 160 #arcP
->Proto Cs0 .type com.axon.market.jira.connector.demo.CreateComment.CreateCommentData #txt
+>Proto Cs0 .type com.axonivy.connector.jira.demo.CreateComment.CreateCommentData #txt
 >Proto Cs0 .processKind HTML_DIALOG #txt
 >Proto Cs0 -8 -8 16 16 16 26 #rect
 Cs0 f0 mainOut f2 tail #connect

@@ -1,4 +1,4 @@
-ShowIssueData #class
-com.axon.market.jira.connector.demo.ShowIssue #namespace
+CreateIssueData #class
+com.axonivy.connector.jira.demo.CreateIssue #namespace
 issueParent com.axonivy.connector.jira.models.IssueParent #field
 issueParent PERSISTENT #fieldModifier

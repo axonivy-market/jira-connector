@@ -36,7 +36,7 @@ Go0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 Go0 f0 @C|.responsibility Everybody #txt
 Go0 f0 81 49 30 30 -21 17 #rect
 Go0 f1 657 49 30 30 0 15 #rect
-Go0 f3 dialogId com.axon.market.jira.connector.demo.KeyInput #txt
+Go0 f3 dialogId com.axonivy.connector.jira.demo.KeyInput #txt
 Go0 f3 startMethod start() #txt
 Go0 f3 requestActionDecl '<> param;' #txt
 Go0 f3 responseMappingAction 'out=in;
@@ -68,7 +68,7 @@ Go0 f5 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 Go0 f5 328 42 112 44 -36 -8 #rect
 Go0 f5 res:/webContent/icons/jira.png #fDecoratorIcon
 Go0 f6 280 64 328 64 #arcP
-Go0 f7 dialogId com.axon.market.jira.connector.demo.ShowIssue #txt
+Go0 f7 dialogId com.axonivy.connector.jira.demo.ShowIssue #txt
 Go0 f7 startMethod start(com.axonivy.connector.jira.models.IssueParent) #txt
 Go0 f7 requestActionDecl '<com.axonivy.connector.jira.models.IssueParent issueParent> param;' #txt
 Go0 f7 requestMappingAction 'param.issueParent=in.issueParent;

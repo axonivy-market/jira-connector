@@ -37,7 +37,7 @@ Co0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 Co0 f0 @C|.responsibility Everybody #txt
 Co0 f0 81 49 30 30 -21 17 #rect
 Co0 f1 657 49 30 30 0 15 #rect
-Co0 f3 dialogId com.axon.market.jira.connector.demo.CreateIssue #txt
+Co0 f3 dialogId com.axonivy.connector.jira.demo.CreateIssue #txt
 Co0 f3 startMethod start() #txt
 Co0 f3 requestActionDecl '<> param;' #txt
 Co0 f3 responseMappingAction 'out=in;
@@ -72,7 +72,7 @@ Co0 f5 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 Co0 f5 328 42 112 44 -45 -8 #rect
 Co0 f5 res:/webContent/icons/jira.png #fDecoratorIcon
 Co0 f6 280 64 328 64 #arcP
-Co0 f7 dialogId com.axon.market.jira.connector.demo.ShowKey #txt
+Co0 f7 dialogId com.axonivy.connector.jira.demo.ShowKey #txt
 Co0 f7 startMethod start(String) #txt
 Co0 f7 requestActionDecl '<String key> param;' #txt
 Co0 f7 requestMappingAction 'param.key=in.issueParent.key;

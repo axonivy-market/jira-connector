@@ -34,7 +34,7 @@ Co0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 Co0 f0 @C|.responsibility Everybody #txt
 Co0 f0 81 49 30 30 -21 17 #rect
 Co0 f1 497 49 30 30 0 15 #rect
-Co0 f3 dialogId com.axon.market.jira.connector.demo.CreateComment #txt
+Co0 f3 dialogId com.axonivy.connector.jira.demo.CreateComment #txt
 Co0 f3 startMethod start() #txt
 Co0 f3 requestActionDecl '<> param;' #txt
 Co0 f3 responseMappingAction 'out=in;

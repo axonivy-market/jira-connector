@@ -53,7 +53,7 @@ Io0 f3 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 Io0 f3 168 42 112 44 -36 -8 #rect
 Io0 f3 res:/webContent/icons/jira.png #fDecoratorIcon
 Io0 f4 111 64 168 64 #arcP
-Io0 f5 dialogId com.axon.market.jira.connector.demo.ShowIssue #txt
+Io0 f5 dialogId com.axonivy.connector.jira.demo.ShowIssue #txt
 Io0 f5 startMethod start(com.axonivy.connector.jira.models.IssueParent) #txt
 Io0 f5 requestActionDecl '<com.axonivy.connector.jira.models.IssueParent issueParent> param;' #txt
 Io0 f5 requestMappingAction 'param.issueParent=in.issueParent;
