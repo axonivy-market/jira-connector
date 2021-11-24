@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.axonivy.connector.jira</groupId>
   <artifactId>jira-connector-product</artifactId>
-  <version>${version}</version>
+  <version>9.3.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <build>
