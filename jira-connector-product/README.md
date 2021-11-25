@@ -13,4 +13,20 @@ Axon Ivy's [Atlassian Jira Connector ](https://www.atlassian.com/software/jira) 
 
 ## Setup
 
-"YOUR SETUP DESCRIPTION GOES HERE"
+Open the `Config/variables.yaml` in your Axon Ivy Designer and paste the
+code below and adjust the values to your environment.
+
+```
+Variables:
+
+  jira-connector:
+  
+    # Url to the Jira server
+    Url: "https://localhost"
+
+    # Username to connect to the Jira server
+    Username: "admin"
+
+    # Password to connect to the Jira server
+    Password: "1234"
+```

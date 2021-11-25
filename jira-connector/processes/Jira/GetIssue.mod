@@ -16,6 +16,7 @@ Ge0 @PushWFArc f4 '' #zField
 Ge0 @PushWFArc f2 '' #zField
 >Proto Ge0 Ge0 GetIssue #zField
 Ge0 f0 inParamDecl '<String issueKey> param;' #txt
+Ge0 f0 inParamInfo 'issueKey.description=Issue Key' #txt
 Ge0 f0 inParamTable 'out.issueParent.key=param.issueKey;
 ' #txt
 Ge0 f0 outParamDecl '<com.axonivy.connector.jira.models.IssueParent issueParent> result;' #txt

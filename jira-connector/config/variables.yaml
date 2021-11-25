@@ -1,0 +1,13 @@
+Variables:
+
+  jira-connector:
+  
+    # Url to jira server
+    Url: ""
+
+    # Username to connect to the Jira server
+    Username: ""
+
+    # Password to connect to the Jira server
+    # [password]
+    Password: ""
