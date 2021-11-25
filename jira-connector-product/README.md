@@ -9,7 +9,9 @@ Axon Ivy's [Atlassian Jira Connector ](https://www.atlassian.com/software/jira) 
 
 ## Demo
 
-"YOUR DEMO DESCRIPTION GOES HERE"
+![jira-connector Demo 1](images/create-issue.png "Create Jira issue")
+![jira-connector Demo 2](images/create-comment.png "Craete Jira comment")
+
 
 ## Setup
 
