@@ -22,7 +22,7 @@
     <dependency>
       <groupId>com.axonivy.ivy.test</groupId>
       <artifactId>unit-tester</artifactId>
-      <version>9.2.0</version>
+      <version>9.3.0</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
@@ -34,9 +34,6 @@
         <artifactId>project-build-plugin</artifactId>
         <version>9.3.1</version>
         <extensions>true</extensions>
-        <configuration>
-          <engineListPageUrl>https://developer.axonivy.com/download/archive/unstable</engineListPageUrl>
-        </configuration>
       </plugin>
     </plugins>
   </build>
