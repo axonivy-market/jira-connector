@@ -1,0 +1,4 @@
+KeyInputData #class
+com.axonivy.connector.jira.demo.KeyInput #namespace
+key String #field
+key PERSISTENT #fieldModifier

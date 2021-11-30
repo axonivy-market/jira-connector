@@ -1,0 +1,4 @@
+ShowKeyData #class
+com.axonivy.connector.jira.demo.ShowKey #namespace
+key String #field
+key PERSISTENT #fieldModifier

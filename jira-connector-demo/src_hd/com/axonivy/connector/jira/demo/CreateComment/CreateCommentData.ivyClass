@@ -1,0 +1,6 @@
+CreateCommentData #class
+com.axonivy.connector.jira.demo.CreateComment #namespace
+key String #field
+key PERSISTENT #fieldModifier
+comment String #field
+comment PERSISTENT #fieldModifier

@@ -1,0 +1,12 @@
+RestClients:
+  Jira:
+    UUID: a5b21baf-2b4f-44ac-a9e7-9c1b0607e0a6
+    Url: ${ivy.var.jira-connector.Url}
+    Icon: res:/webContent/icons/jira.png
+    Features:
+    - ch.ivyteam.ivy.rest.client.mapper.JsonFeature
+    - ch.ivyteam.ivy.rest.client.authentication.HttpBasicAuthenticationFeature
+    Properties:
+      username: ${ivy.var.jira-connector.Username}
+      password: ${ivy.var.jira-connector.Password}
+

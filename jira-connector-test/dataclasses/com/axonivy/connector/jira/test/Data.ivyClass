@@ -1,0 +1,8 @@
+Data #class
+com.axonivy.connector.jira.test #namespace
+issueParent com.axonivy.connector.jira.models.IssueParent #field
+issueParent PERSISTENT #fieldModifier
+comment String #field
+comment PERSISTENT #fieldModifier
+jsonString String #field
+jsonString PERSISTENT #fieldModifier
