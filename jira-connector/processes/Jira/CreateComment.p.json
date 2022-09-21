@@ -1,0 +1,56 @@
+{
+  "format" : "9.4.20",
+  "id" : "17CFE7FDBE643EEE",
+  "data" : "com.axonivy.connector.jira.Data",
+  "kind" : "CALLABLE_SUB",
+  "elements" : [ {
+      "id" : "f0",
+      "type" : "CallSubStart",
+      "name" : "call(String,String)",
+      "config" : {
+        "callSignature" : "call",
+        "input" : {
+          "params" : [
+            { "name" : "issueKey", "type" : "String" },
+            { "name" : "comment", "type" : "String" }
+          ],
+          "map" : {
+            "out.comment" : "param.comment",
+            "out.issueParent.key" : "param.issueKey"
+          }
+        }
+      },
+      "visual" : {
+        "at" : { "x" : 96, "y" : 64 },
+        "labelOffset" : { "x" : 23, "y" : 38 }
+      },
+      "connect" : { "id" : "f4", "to" : "f3" }
+    }, {
+      "id" : "f1",
+      "type" : "CallSubEnd",
+      "visual" : {
+        "at" : { "x" : 352, "y" : 64 }
+      }
+    }, {
+      "id" : "f3",
+      "type" : "RestClientCall",
+      "name" : "Create Comment",
+      "config" : {
+        "path" : "issue/{key}/comment",
+        "bodyObjectMapping" : {
+          "param.body" : "in.comment"
+        },
+        "clientId" : "a5b21baf-2b4f-44ac-a9e7-9c1b0607e0a6",
+        "method" : "POST",
+        "bodyObjectType" : "com.axonivy.connector.jira.models.Comment",
+        "templateParams" : {
+          "key" : "in.issueParent.key"
+        },
+        "bodyInputType" : "ENTITY"
+      },
+      "visual" : {
+        "at" : { "x" : 224, "y" : 64 }
+      },
+      "connect" : { "id" : "f2", "to" : "f1" }
+    } ]
+}

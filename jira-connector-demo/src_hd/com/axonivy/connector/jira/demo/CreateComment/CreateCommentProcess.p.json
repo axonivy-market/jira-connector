@@ -1,0 +1,54 @@
+{
+  "format" : "9.4.20",
+  "id" : "17CFE8AC95F307D8",
+  "data" : "com.axonivy.connector.jira.demo.CreateComment.CreateCommentData",
+  "kind" : "HTML_DIALOG",
+  "elements" : [ {
+      "id" : "f0",
+      "type" : "HtmlDialogStart",
+      "name" : "start()",
+      "config" : {
+        "callSignature" : "start",
+        "result" : {
+          "params" : [
+            { "name" : "key", "type" : "String" },
+            { "name" : "comment", "type" : "String" }
+          ],
+          "map" : {
+            "result.key" : "in.key",
+            "result.comment" : "in.comment"
+          }
+        },
+        "guid" : "17CFE8AC967E815F"
+      },
+      "visual" : {
+        "at" : { "x" : 96, "y" : 64 },
+        "labelOffset" : { "x" : 12, "y" : 35 }
+      },
+      "connect" : { "id" : "f2", "to" : "f1" }
+    }, {
+      "id" : "f1",
+      "type" : "HtmlDialogEnd",
+      "visual" : {
+        "at" : { "x" : 224, "y" : 64 }
+      }
+    }, {
+      "id" : "f3",
+      "type" : "HtmlDialogEventStart",
+      "name" : "close",
+      "config" : {
+        "guid" : "17CFE8AC972F4A92"
+      },
+      "visual" : {
+        "at" : { "x" : 96, "y" : 160 },
+        "labelOffset" : { "x" : 9, "y" : 35 }
+      },
+      "connect" : { "id" : "f5", "to" : "f4" }
+    }, {
+      "id" : "f4",
+      "type" : "HtmlDialogExit",
+      "visual" : {
+        "at" : { "x" : 224, "y" : 160 }
+      }
+    } ]
+}
