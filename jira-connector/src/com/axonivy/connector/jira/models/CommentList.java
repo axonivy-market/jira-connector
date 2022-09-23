@@ -18,7 +18,7 @@ public class CommentList {
 
 	public void setComments(List<Comment> comments) {
 		this.comments = comments;
-	};
+	}
 
 	@JsonIgnore
 	public Comment getLatestComment() {
