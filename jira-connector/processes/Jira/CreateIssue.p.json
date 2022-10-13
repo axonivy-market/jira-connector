@@ -1,8 +1,10 @@
 {
-  "format" : "9.4.20",
+  "format" : "10.0.0",
   "id" : "17CFE812FE1634FD",
-  "data" : "com.axonivy.connector.jira.Data",
   "kind" : "CALLABLE_SUB",
+  "config" : {
+    "data" : "com.axonivy.connector.jira.Data"
+  },
   "elements" : [ {
       "id" : "f0",
       "type" : "CallSubStart",
