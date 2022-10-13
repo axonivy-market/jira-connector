@@ -1,7 +1,9 @@
 {
-  "format" : "9.4.20",
+  "format" : "10.0.0",
   "id" : "17CFE8F33D99A7D1",
-  "data" : "com.axonivy.connector.jira.demo.Data",
+  "config" : {
+    "data" : "com.axonivy.connector.jira.demo.Data"
+  },
   "elements" : [ {
       "id" : "f0",
       "type" : "RequestStart",
