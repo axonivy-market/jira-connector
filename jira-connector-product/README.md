@@ -1,11 +1,16 @@
 # Jira Connector
 
-Axon Ivy's [Atlassian Jira Connector ](https://www.atlassian.com/software/jira) gives you full power to track issues within your process work. The connector:
+[Atlassian Jira](https://www.atlassian.com/software/jira) is a widely-used project management and issue tracking tool that helps teams efficiently plan, track, and release software. It provides a user-friendly interface for creating tasks, assigning them to team members, setting priorities and deadlines, and monitoring progress.
 
-- Features three main functionalities (create comment, create issue, and get issue).
-- Provides access to the core API of Atlassian Jira.
-- Supports you with an easy-to-copy demo implementation to reduce your integration effort.
-- Enables low code citizen developers to integrate issue tracking tools without writing a single line of code.
+**Axon Ivy's Atlassian Jira Connector** seamlessly integrates Jira's powerful features into your workflows, allowing you to leverage its capabilities within your processes.
+
+This connector offers:
+
+- Three key functionalities: creating comments, creating issues, and retrieving issues.
+- Access to the core API of Atlassian Jira, enabling you to interact with the platform programmatically.
+- A demo implementation that minimizes your integration effort, empowering citizen developers to integrate Jira without writing any code.
+
+By utilizing Axon Ivy's Atlassian Jira Connector, you can streamline your project management and issue tracking processes, ensuring smooth collaboration and efficient software development.
 
 ## Demo
 
