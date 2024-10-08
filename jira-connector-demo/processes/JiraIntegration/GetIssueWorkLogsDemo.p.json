@@ -23,7 +23,7 @@
       "id" : "f1",
       "type" : "TaskEnd",
       "visual" : {
-        "at" : { "x" : 968, "y" : 64 }
+        "at" : { "x" : 1088, "y" : 64 }
       }
     }, {
       "id" : "f3",
@@ -75,11 +75,35 @@
       "type" : "Script",
       "config" : {
         "output" : {
+          "map" : {
+            "out" : "in",
+            "out.issueWorkLogs" : "in.issueWorkLogs"
+          },
           "code" : "ivy.log.info(\"Issue work log total: {0}\", in.issueWorkLogs.total);"
         }
       },
       "visual" : {
-        "at" : { "x" : 800, "y" : 64 }
+        "at" : { "x" : 776, "y" : 64 }
+      },
+      "connect" : { "id" : "f10", "to" : "f9" }
+    }, {
+      "id" : "f9",
+      "type" : "DialogCall",
+      "name" : "ShowWorklogs",
+      "config" : {
+        "dialogId" : "com.axonivy.connector.jira.demo.ShowWorklogs",
+        "startMethod" : "start(com.axonivy.connector.jira.models.IssueWorkLogs)",
+        "call" : {
+          "params" : [
+            { "name" : "issueWorkLogs", "type" : "com.axonivy.connector.jira.models.IssueWorkLogs" }
+          ],
+          "map" : {
+            "param.issueWorkLogs" : "in.issueWorkLogs"
+          }
+        }
+      },
+      "visual" : {
+        "at" : { "x" : 960, "y" : 64 }
       },
       "connect" : { "id" : "f7", "to" : "f1" }
     } ]
