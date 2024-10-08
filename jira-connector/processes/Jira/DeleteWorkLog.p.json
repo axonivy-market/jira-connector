@@ -1,0 +1,57 @@
+{
+  "format" : "10.0.0",
+  "id" : "192471817E472F6F",
+  "kind" : "CALLABLE_SUB",
+  "config" : {
+    "data" : "com.axonivy.connector.jira.Data"
+  },
+  "elements" : [ {
+      "id" : "f0",
+      "type" : "CallSubStart",
+      "name" : "call(String,String)",
+      "config" : {
+        "callSignature" : "call",
+        "input" : {
+          "params" : [
+            { "name" : "issueKey", "type" : "String", "desc" : "Issue Key" },
+            { "name" : "id", "type" : "String", "desc" : "Worklog ID" }
+          ],
+          "map" : {
+            "out.issueParent.key" : "param.issueKey",
+            "out.workLog.id" : "param.id"
+          }
+        }
+      },
+      "visual" : {
+        "at" : { "x" : 96, "y" : 64 },
+        "labelOffset" : { "x" : 29, "y" : 37 }
+      },
+      "connect" : { "id" : "f4", "to" : "f3" }
+    }, {
+      "id" : "f1",
+      "type" : "CallSubEnd",
+      "visual" : {
+        "at" : { "x" : 528, "y" : 64 }
+      }
+    }, {
+      "id" : "f3",
+      "type" : "RestClientCall",
+      "name" : "Delete work log",
+      "config" : {
+        "path" : "/issue/{key}/worklog/{id}",
+        "clientId" : "a5b21baf-2b4f-44ac-a9e7-9c1b0607e0a6",
+        "clientErrorCode" : "ivy:error:rest:client",
+        "method" : "DELETE",
+        "statusErrorCode" : "ivy:error:rest:client",
+        "templateParams" : {
+          "key" : "in.issueParent.key",
+          "ivy.var.jira-connector.Url" : "",
+          "id" : "in.workLog.id"
+        }
+      },
+      "visual" : {
+        "at" : { "x" : 296, "y" : 64 }
+      },
+      "connect" : { "id" : "f2", "to" : "f1" }
+    } ]
+}
