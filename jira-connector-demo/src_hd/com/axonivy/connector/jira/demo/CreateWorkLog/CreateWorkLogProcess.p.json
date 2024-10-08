@@ -1,0 +1,63 @@
+{
+  "format" : "10.0.0",
+  "id" : "1924635B4D56E9DB",
+  "kind" : "HTML_DIALOG",
+  "config" : {
+    "data" : "com.axonivy.connector.jira.demo.CreateWorkLog.CreateWorkLogData"
+  },
+  "elements" : [ {
+      "id" : "f0",
+      "type" : "HtmlDialogStart",
+      "name" : "start()",
+      "config" : {
+        "callSignature" : "start",
+        "result" : {
+          "params" : [
+            { "name" : "workLog", "type" : "com.axonivy.connector.jira.models.WorkLog" },
+            { "name" : "issueKey", "type" : "String" }
+          ],
+          "map" : {
+            "result.workLog" : "in.workLog",
+            "result.issueKey" : "in.issueKey"
+          }
+        },
+        "input" : {
+          "map" : {
+            "out.workLog" : "new com.axonivy.connector.jira.models.WorkLog()",
+            "out.workLog.created" : "java.time.Instant.now().toString()"
+          }
+        },
+        "guid" : "17CFE8A85E3686E6"
+      },
+      "visual" : {
+        "at" : { "x" : 96, "y" : 64 },
+        "size" : { "width" : 24, "height" : 24 },
+        "labelOffset" : { "x" : 12, "y" : 35 }
+      },
+      "connect" : { "id" : "f2", "to" : "f1" }
+    }, {
+      "id" : "f1",
+      "type" : "HtmlDialogEnd",
+      "visual" : {
+        "at" : { "x" : 224, "y" : 64 }
+      }
+    }, {
+      "id" : "f3",
+      "type" : "HtmlDialogEventStart",
+      "name" : "close",
+      "config" : {
+        "guid" : "17CFE8A85E8A28D0"
+      },
+      "visual" : {
+        "at" : { "x" : 96, "y" : 160 },
+        "labelOffset" : { "x" : 9, "y" : 35 }
+      },
+      "connect" : { "id" : "f5", "to" : "f4" }
+    }, {
+      "id" : "f4",
+      "type" : "HtmlDialogExit",
+      "visual" : {
+        "at" : { "x" : 224, "y" : 160 }
+      }
+    } ]
+}

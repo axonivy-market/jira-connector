@@ -1,6 +1,5 @@
 package com.axonivy.connector.jira.models;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
@@ -8,6 +7,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Issue {
+	
+	@JsonProperty("id")
+	@JsonInclude(Include.NON_NULL)
+	private String id;
 	
 	@JsonProperty("project")
 	private Project project = new Project();
@@ -22,7 +25,8 @@ public class Issue {
 	@JsonInclude(Include.NON_NULL)
 	private Issuetype issuetype = new Issuetype();
 	
-	@JsonIgnore
+	@JsonProperty("key")
+	@JsonInclude(Include.NON_NULL)
 	private String key;
 	
 	@JsonProperty("status")
