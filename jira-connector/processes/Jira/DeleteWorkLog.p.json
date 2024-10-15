@@ -8,16 +8,20 @@
   "elements" : [ {
       "id" : "f0",
       "type" : "CallSubStart",
-      "name" : "call(String,String)",
+      "name" : "call(String,String,String,String)",
       "config" : {
         "callSignature" : "call",
         "input" : {
           "params" : [
             { "name" : "issueKey", "type" : "String", "desc" : "Issue Key" },
-            { "name" : "id", "type" : "String", "desc" : "Worklog ID" }
+            { "name" : "id", "type" : "String", "desc" : "Worklog ID" },
+            { "name" : "adjustEstimate", "type" : "String" },
+            { "name" : "notifyUsers", "type" : "String" }
           ],
           "map" : {
+            "out.adjustEstimate" : "param.adjustEstimate",
             "out.issueParent.key" : "param.issueKey",
+            "out.notifyUsers" : "param.notifyUsers",
             "out.workLog.id" : "param.id"
           }
         }
@@ -42,6 +46,10 @@
         "clientId" : "a5b21baf-2b4f-44ac-a9e7-9c1b0607e0a6",
         "clientErrorCode" : "ivy:error:rest:client",
         "method" : "DELETE",
+        "queryParams" : {
+          "adjustEstimate" : "in.adjustEstimate",
+          "notifyUsers" : "in.notifyUsers"
+        },
         "statusErrorCode" : "ivy:error:rest:client",
         "templateParams" : {
           "key" : "in.issueParent.key",

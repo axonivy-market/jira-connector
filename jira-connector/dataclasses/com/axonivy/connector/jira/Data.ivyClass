@@ -16,3 +16,7 @@ searchIssue com.axonivy.connector.jira.models.SearchIssue #field
 searchIssue PERSISTENT #fieldModifier
 searchIssueResult com.axonivy.connector.jira.models.SearchIssueResult #field
 searchIssueResult PERSISTENT #fieldModifier
+adjustEstimate String #field
+adjustEstimate PERSISTENT #fieldModifier
+notifyUsers String #field
+notifyUsers PERSISTENT #fieldModifier
