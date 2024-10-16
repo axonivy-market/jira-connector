@@ -1,0 +1,95 @@
+{
+  "format" : "10.0.0",
+  "id" : "19247124B8F8D2CA",
+  "config" : {
+    "data" : "com.axonivy.connector.jira.demo.Data"
+  },
+  "elements" : [ {
+      "id" : "f0",
+      "type" : "RequestStart",
+      "name" : "start.ivp",
+      "config" : {
+        "callSignature" : "start",
+        "outLink" : "start.ivp",
+        "startName" : "Demo: Get Issue Work Logs",
+        "case" : { }
+      },
+      "visual" : {
+        "at" : { "x" : 96, "y" : 64 },
+        "labelOffset" : { "x" : 12, "y" : 37 }
+      },
+      "connect" : { "id" : "f4", "to" : "f3" }
+    }, {
+      "id" : "f1",
+      "type" : "TaskEnd",
+      "visual" : {
+        "at" : { "x" : 1088, "y" : 64 }
+      }
+    }, {
+      "id" : "f3",
+      "type" : "DialogCall",
+      "name" : "KeyInput",
+      "config" : {
+        "dialogId" : "com.axonivy.connector.jira.demo.KeyInput",
+        "startMethod" : "start()",
+        "output" : {
+          "map" : {
+            "out" : "in",
+            "out.issueParent.key" : "result.key"
+          }
+        }
+      },
+      "visual" : {
+        "at" : { "x" : 224, "y" : 64 }
+      },
+      "connect" : { "id" : "f6", "to" : "f5" }
+    }, {
+      "id" : "f5",
+      "type" : "SubProcessCall",
+      "name" : "Jira/GetIssueWorkLogs",
+      "config" : {
+        "processCall" : "Jira/GetIssueWorkLogs:call(String)",
+        "output" : {
+          "map" : {
+            "out" : "in",
+            "out.issueWorkLogs" : "result.issueWorkLogs"
+          },
+          "code" : "ivy.log.info(\"Issue work log total: {0}\", in.issueWorkLogs.total);"
+        },
+        "call" : {
+          "params" : [
+            { "name" : "issueKey", "type" : "String" }
+          ],
+          "map" : {
+            "param.issueKey" : "in.issueParent.key"
+          }
+        }
+      },
+      "visual" : {
+        "at" : { "x" : 512, "y" : 64 },
+        "size" : { "width" : 208, "height" : 60 },
+        "icon" : "res:/webContent/icons/jira.png"
+      },
+      "connect" : { "id" : "f2", "to" : "f9" }
+    }, {
+      "id" : "f9",
+      "type" : "DialogCall",
+      "name" : "ShowWorklogs",
+      "config" : {
+        "dialogId" : "com.axonivy.connector.jira.demo.ShowWorklogs",
+        "startMethod" : "start(com.axonivy.connector.jira.models.IssueWorkLogs)",
+        "call" : {
+          "params" : [
+            { "name" : "issueWorkLogs", "type" : "com.axonivy.connector.jira.models.IssueWorkLogs" }
+          ],
+          "map" : {
+            "param.issueWorkLogs" : "in.issueWorkLogs"
+          }
+        }
+      },
+      "visual" : {
+        "at" : { "x" : 864, "y" : 64 }
+      },
+      "connect" : { "id" : "f7", "to" : "f1" }
+    } ]
+}

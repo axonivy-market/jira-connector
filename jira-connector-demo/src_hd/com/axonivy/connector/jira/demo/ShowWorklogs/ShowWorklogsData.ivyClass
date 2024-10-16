@@ -1,0 +1,4 @@
+ShowWorklogsData #class
+com.axonivy.connector.jira.demo.ShowWorklogs #namespace
+issueWorkLogs com.axonivy.connector.jira.models.IssueWorkLogs #field
+issueWorkLogs PERSISTENT #fieldModifier
