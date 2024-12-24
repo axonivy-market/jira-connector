@@ -5,7 +5,6 @@
   "isBusinessCaseData" : false,
   "fields" : [ {
     "name" : "issueParent",
-    "type" : "com.axonivy.connector.jira.models.IssueParent",
-    "modifiers" : [ "PERSISTENT" ]
+    "type" : "com.axonivy.connector.jira.models.IssueParent"
   } ]
 }

@@ -5,8 +5,7 @@
   "isBusinessCaseData" : false,
   "fields" : [ {
     "name" : "issueParent",
-    "type" : "com.axonivy.connector.jira.models.IssueParent",
-    "modifiers" : [ "PERSISTENT" ]
+    "type" : "com.axonivy.connector.jira.models.IssueParent"
   }, {
     "name" : "comment",
     "type" : "String",
@@ -17,15 +16,12 @@
     "modifiers" : [ "PERSISTENT" ]
   }, {
     "name" : "workLog",
-    "type" : "com.axonivy.connector.jira.models.WorkLog",
-    "modifiers" : [ "PERSISTENT" ]
+    "type" : "com.axonivy.connector.jira.models.WorkLog"
   }, {
     "name" : "issueWorkLogs",
-    "type" : "com.axonivy.connector.jira.models.IssueWorkLogs",
-    "modifiers" : [ "PERSISTENT" ]
+    "type" : "com.axonivy.connector.jira.models.IssueWorkLogs"
   }, {
     "name" : "searchIssueResult",
-    "type" : "com.axonivy.connector.jira.models.SearchIssueResult",
-    "modifiers" : [ "PERSISTENT" ]
+    "type" : "com.axonivy.connector.jira.models.SearchIssueResult"
   } ]
 }
