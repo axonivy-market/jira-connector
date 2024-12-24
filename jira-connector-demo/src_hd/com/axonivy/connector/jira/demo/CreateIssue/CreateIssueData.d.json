@@ -1,0 +1,11 @@
+{
+  "$schema" : "https://json-schema.axonivy.com/data-class/12.0.0/data-class.json",
+  "simpleName" : "CreateIssueData",
+  "namespace" : "com.axonivy.connector.jira.demo.CreateIssue",
+  "isBusinessCaseData" : false,
+  "fields" : [ {
+    "name" : "issueParent",
+    "type" : "com.axonivy.connector.jira.models.IssueParent",
+    "modifiers" : [ "PERSISTENT" ]
+  } ]
+}

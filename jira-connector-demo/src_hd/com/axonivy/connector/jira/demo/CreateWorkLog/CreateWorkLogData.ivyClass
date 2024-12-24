@@ -1,6 +1,0 @@
-CreateWorkLogData #class
-com.axonivy.connector.jira.demo.CreateWorkLog #namespace
-workLog com.axonivy.connector.jira.models.WorkLog #field
-workLog PERSISTENT #fieldModifier
-issueKey String #field
-issueKey PERSISTENT #fieldModifier

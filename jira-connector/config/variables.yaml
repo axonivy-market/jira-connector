@@ -1,13 +1,14 @@
+# yaml-language-server: $schema=https://json-schema.axonivy.com/app/12.0.0/variables.json
 Variables:
-
-  jira-connector:
   
+  jira-connector:
+    
     # Url to jira server
     Url: ""
-
+    
     # Username to connect to the Jira server
     Username: ""
-
+    
     # Password to connect to the Jira server
     # [password]
     Password: ""

@@ -1,5 +1,5 @@
 {
-  "format" : "10.0.0",
+  "$schema" : "https://json-schema.axonivy.com/process/12.0.0/process.json",
   "id" : "1924635B4D56E9DB",
   "kind" : "HTML_DIALOG",
   "config" : {
@@ -10,21 +10,21 @@
       "type" : "HtmlDialogStart",
       "name" : "start()",
       "config" : {
-        "callSignature" : "start",
-        "result" : {
-          "params" : [
-            { "name" : "workLog", "type" : "com.axonivy.connector.jira.models.WorkLog" },
-            { "name" : "issueKey", "type" : "String" }
-          ],
-          "map" : {
-            "result.workLog" : "in.workLog",
-            "result.issueKey" : "in.issueKey"
-          }
-        },
+        "signature" : "start",
         "input" : {
           "map" : {
             "out.workLog" : "new com.axonivy.connector.jira.models.WorkLog()",
             "out.workLog.created" : "java.time.Instant.now().toString()"
+          }
+        },
+        "result" : {
+          "params" : [
+            { "name" : "workLog", "type" : "com.axonivy.connector.jira.models.WorkLog", "desc" : "" },
+            { "name" : "issueKey", "type" : "String", "desc" : "" }
+          ],
+          "map" : {
+            "result.workLog" : "in.workLog",
+            "result.issueKey" : "in.issueKey"
           }
         },
         "guid" : "17CFE8A85E3686E6"
@@ -34,7 +34,9 @@
         "size" : { "width" : 24, "height" : 24 },
         "labelOffset" : { "x" : 12, "y" : 35 }
       },
-      "connect" : { "id" : "f2", "to" : "f1" }
+      "connect" : [
+        { "id" : "f2", "to" : "f1" }
+      ]
     }, {
       "id" : "f1",
       "type" : "HtmlDialogEnd",
@@ -52,7 +54,9 @@
         "at" : { "x" : 96, "y" : 160 },
         "labelOffset" : { "x" : 9, "y" : 35 }
       },
-      "connect" : { "id" : "f5", "to" : "f4" }
+      "connect" : [
+        { "id" : "f5", "to" : "f4" }
+      ]
     }, {
       "id" : "f4",
       "type" : "HtmlDialogExit",

@@ -1,0 +1,15 @@
+{
+  "$schema" : "https://json-schema.axonivy.com/data-class/12.0.0/data-class.json",
+  "simpleName" : "CreateCommentData",
+  "namespace" : "com.axonivy.connector.jira.demo.CreateComment",
+  "isBusinessCaseData" : false,
+  "fields" : [ {
+    "name" : "key",
+    "type" : "String",
+    "modifiers" : [ "PERSISTENT" ]
+  }, {
+    "name" : "comment",
+    "type" : "String",
+    "modifiers" : [ "PERSISTENT" ]
+  } ]
+}
