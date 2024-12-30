@@ -1,5 +1,5 @@
 {
-  "format" : "10.0.0",
+  "$schema" : "https://json-schema.axonivy.com/process/12.0.0/process.json",
   "id" : "192471817E472F6F",
   "kind" : "CALLABLE_SUB",
   "config" : {
@@ -10,13 +10,13 @@
       "type" : "CallSubStart",
       "name" : "call(String,String,String,String)",
       "config" : {
-        "callSignature" : "call",
+        "signature" : "call",
         "input" : {
           "params" : [
             { "name" : "issueKey", "type" : "String", "desc" : "Issue Key" },
             { "name" : "id", "type" : "String", "desc" : "Worklog ID" },
-            { "name" : "adjustEstimate", "type" : "String" },
-            { "name" : "notifyUsers", "type" : "String" }
+            { "name" : "adjustEstimate", "type" : "String", "desc" : "" },
+            { "name" : "notifyUsers", "type" : "String", "desc" : "" }
           ],
           "map" : {
             "out.adjustEstimate" : "param.adjustEstimate",
@@ -30,7 +30,9 @@
         "at" : { "x" : 96, "y" : 64 },
         "labelOffset" : { "x" : 29, "y" : 37 }
       },
-      "connect" : { "id" : "f4", "to" : "f3" }
+      "connect" : [
+        { "id" : "f4", "to" : "f3" }
+      ]
     }, {
       "id" : "f1",
       "type" : "CallSubEnd",
@@ -42,24 +44,26 @@
       "type" : "RestClientCall",
       "name" : "Delete work log",
       "config" : {
-        "path" : "/issue/{key}/worklog/{id}",
-        "clientId" : "a5b21baf-2b4f-44ac-a9e7-9c1b0607e0a6",
-        "clientErrorCode" : "ivy:error:rest:client",
         "method" : "DELETE",
-        "queryParams" : {
-          "adjustEstimate" : "in.adjustEstimate",
-          "notifyUsers" : "in.notifyUsers"
-        },
-        "statusErrorCode" : "ivy:error:rest:client",
-        "templateParams" : {
-          "key" : "in.issueParent.key",
-          "ivy.var.jira-connector.Url" : "",
-          "id" : "in.workLog.id"
+        "target" : {
+          "clientId" : "a5b21baf-2b4f-44ac-a9e7-9c1b0607e0a6",
+          "path" : "/issue/{key}/worklog/{id}",
+          "templateParams" : {
+            "key" : "in.issueParent.key",
+            "ivy.var.jira-connector.Url" : "",
+            "id" : "in.workLog.id"
+          },
+          "queryParams" : {
+            "adjustEstimate" : "in.adjustEstimate",
+            "notifyUsers" : "in.notifyUsers"
+          }
         }
       },
       "visual" : {
         "at" : { "x" : 296, "y" : 64 }
       },
-      "connect" : { "id" : "f2", "to" : "f1" }
+      "connect" : [
+        { "id" : "f2", "to" : "f1" }
+      ]
     } ]
 }

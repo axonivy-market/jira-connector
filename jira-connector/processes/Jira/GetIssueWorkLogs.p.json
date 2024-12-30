@@ -1,5 +1,5 @@
 {
-  "format" : "10.0.0",
+  "$schema" : "https://json-schema.axonivy.com/process/12.0.0/process.json",
   "id" : "192470875526DEF1",
   "kind" : "CALLABLE_SUB",
   "config" : {
@@ -10,7 +10,7 @@
       "type" : "CallSubStart",
       "name" : "call(String)",
       "config" : {
-        "callSignature" : "call",
+        "signature" : "call",
         "input" : {
           "params" : [
             { "name" : "issueKey", "type" : "String", "desc" : "Issue Key" }
@@ -21,7 +21,7 @@
         },
         "result" : {
           "params" : [
-            { "name" : "issueWorkLogs", "type" : "com.axonivy.connector.jira.models.IssueWorkLogs" }
+            { "name" : "issueWorkLogs", "type" : "com.axonivy.connector.jira.models.IssueWorkLogs", "desc" : "" }
           ],
           "map" : {
             "result.issueWorkLogs" : "in.issueWorkLogs"
@@ -32,7 +32,9 @@
         "at" : { "x" : 96, "y" : 64 },
         "labelOffset" : { "x" : 29, "y" : 37 }
       },
-      "connect" : { "id" : "f4", "to" : "f3" }
+      "connect" : [
+        { "id" : "f4", "to" : "f3" }
+      ]
     }, {
       "id" : "f1",
       "type" : "CallSubEnd",
@@ -44,22 +46,28 @@
       "type" : "RestClientCall",
       "name" : "Get Issue Work Logs",
       "config" : {
-        "path" : "/issue/{key}/worklog",
-        "clientId" : "a5b21baf-2b4f-44ac-a9e7-9c1b0607e0a6",
-        "clientErrorCode" : "ivy:error:rest:client",
-        "statusErrorCode" : "ivy:error:rest:client",
-        "responseMapping" : {
-          "out.issueWorkLogs" : "result"
+        "target" : {
+          "clientId" : "a5b21baf-2b4f-44ac-a9e7-9c1b0607e0a6",
+          "path" : "/issue/{key}/worklog",
+          "templateParams" : {
+            "key" : "in.issueParent.key"
+          }
         },
-        "templateParams" : {
-          "key" : "in.issueParent.key"
-        },
-        "resultType" : "com.axonivy.connector.jira.models.IssueWorkLogs"
+        "response" : {
+          "entity" : {
+            "type" : "com.axonivy.connector.jira.models.IssueWorkLogs",
+            "map" : {
+              "out.issueWorkLogs" : "result"
+            }
+          }
+        }
       },
       "visual" : {
         "at" : { "x" : 312, "y" : 64 },
-        "size" : { "width" : 168, "height" : 60 }
+        "size" : { "width" : 168 }
       },
-      "connect" : { "id" : "f2", "to" : "f1" }
+      "connect" : [
+        { "id" : "f2", "to" : "f1" }
+      ]
     } ]
 }

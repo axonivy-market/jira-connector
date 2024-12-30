@@ -1,0 +1,27 @@
+{
+  "$schema" : "https://json-schema.axonivy.com/data-class/12.0.0/data-class.json",
+  "simpleName" : "Data",
+  "namespace" : "com.axonivy.connector.jira.demo",
+  "isBusinessCaseData" : false,
+  "fields" : [ {
+    "name" : "issueParent",
+    "type" : "com.axonivy.connector.jira.models.IssueParent"
+  }, {
+    "name" : "comment",
+    "type" : "String",
+    "modifiers" : [ "PERSISTENT" ]
+  }, {
+    "name" : "jsonString",
+    "type" : "String",
+    "modifiers" : [ "PERSISTENT" ]
+  }, {
+    "name" : "workLog",
+    "type" : "com.axonivy.connector.jira.models.WorkLog"
+  }, {
+    "name" : "issueWorkLogs",
+    "type" : "com.axonivy.connector.jira.models.IssueWorkLogs"
+  }, {
+    "name" : "searchIssueResult",
+    "type" : "com.axonivy.connector.jira.models.SearchIssueResult"
+  } ]
+}

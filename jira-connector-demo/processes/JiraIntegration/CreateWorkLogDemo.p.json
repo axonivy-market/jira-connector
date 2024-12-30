@@ -1,5 +1,5 @@
 {
-  "format" : "10.0.0",
+  "$schema" : "https://json-schema.axonivy.com/process/12.0.0/process.json",
   "id" : "1924633C0A3D0151",
   "config" : {
     "data" : "com.axonivy.connector.jira.demo.Data"
@@ -9,17 +9,21 @@
       "type" : "RequestStart",
       "name" : "start.ivp",
       "config" : {
-        "callSignature" : "start",
-        "outLink" : "start.ivp",
-        "startName" : "Demo: Create Jira Issue Work Log",
-        "tags" : "demo",
-        "case" : { }
+        "signature" : "start",
+        "request" : {
+          "name" : "Demo: Create Jira Issue Work Log"
+        }
       },
+      "tags" : [
+        "demo"
+      ],
       "visual" : {
         "at" : { "x" : 96, "y" : 64 },
         "labelOffset" : { "x" : 12, "y" : 37 }
       },
-      "connect" : { "id" : "f4", "to" : "f3" }
+      "connect" : [
+        { "id" : "f4", "to" : "f3" }
+      ]
     }, {
       "id" : "f1",
       "type" : "TaskEnd",
@@ -31,8 +35,7 @@
       "type" : "DialogCall",
       "name" : "CreateWorkLog",
       "config" : {
-        "dialogId" : "com.axonivy.connector.jira.demo.CreateWorkLog",
-        "startMethod" : "start()",
+        "dialog" : "com.axonivy.connector.jira.demo.CreateWorkLog:start()",
         "output" : {
           "map" : {
             "out" : "in",
@@ -44,27 +47,25 @@
       "visual" : {
         "at" : { "x" : 280, "y" : 64 }
       },
-      "connect" : { "id" : "f6", "to" : "f5" }
+      "connect" : [
+        { "id" : "f6", "to" : "f5" }
+      ]
     }, {
       "id" : "f5",
       "type" : "SubProcessCall",
       "name" : "Jira/CreateWorkLog",
       "config" : {
         "processCall" : "Jira/CreateWorkLog:call(String,com.axonivy.connector.jira.models.WorkLog)",
+        "call" : {
+          "map" : {
+            "param.issueIdOrKey" : "in.issueParent.key",
+            "param.workLog" : "in.workLog"
+          }
+        },
         "output" : {
           "map" : {
             "out" : "in",
             "out.workLog" : "result.workLog"
-          }
-        },
-        "call" : {
-          "params" : [
-            { "name" : "issueIdOrKey", "type" : "String" },
-            { "name" : "workLog", "type" : "com.axonivy.connector.jira.models.WorkLog" }
-          ],
-          "map" : {
-            "param.issueIdOrKey" : "in.issueParent.key",
-            "param.workLog" : "in.workLog"
           }
         }
       },
@@ -72,6 +73,8 @@
         "at" : { "x" : 520, "y" : 64 },
         "icon" : "res:/webContent/icons/jira.png"
       },
-      "connect" : { "id" : "f2", "to" : "f1" }
+      "connect" : [
+        { "id" : "f2", "to" : "f1" }
+      ]
     } ]
 }

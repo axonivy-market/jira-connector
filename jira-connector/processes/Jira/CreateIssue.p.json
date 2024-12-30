@@ -1,5 +1,5 @@
 {
-  "format" : "10.0.0",
+  "$schema" : "https://json-schema.axonivy.com/process/12.0.0/process.json",
   "id" : "17CFE812FE1634FD",
   "kind" : "CALLABLE_SUB",
   "config" : {
@@ -10,13 +10,13 @@
       "type" : "CallSubStart",
       "name" : "call(String,String,String,String)",
       "config" : {
-        "callSignature" : "call",
+        "signature" : "call",
         "input" : {
           "params" : [
-            { "name" : "projectKey", "type" : "String" },
-            { "name" : "issueType", "type" : "String" },
-            { "name" : "summary", "type" : "String" },
-            { "name" : "description", "type" : "String" }
+            { "name" : "projectKey", "type" : "String", "desc" : "" },
+            { "name" : "issueType", "type" : "String", "desc" : "" },
+            { "name" : "summary", "type" : "String", "desc" : "" },
+            { "name" : "description", "type" : "String", "desc" : "" }
           ],
           "map" : {
             "out.issueParent.fields.description" : "param.description",
@@ -27,7 +27,7 @@
         },
         "result" : {
           "params" : [
-            { "name" : "issueParent", "type" : "com.axonivy.connector.jira.models.IssueParent" }
+            { "name" : "issueParent", "type" : "com.axonivy.connector.jira.models.IssueParent", "desc" : "" }
           ],
           "map" : {
             "result.issueParent" : "in.issueParent"
@@ -38,7 +38,9 @@
         "at" : { "x" : 96, "y" : 64 },
         "labelOffset" : { "x" : 34, "y" : 37 }
       },
-      "connect" : { "id" : "f4", "to" : "f3" }
+      "connect" : [
+        { "id" : "f4", "to" : "f3" }
+      ]
     }, {
       "id" : "f1",
       "type" : "CallSubEnd",
@@ -50,24 +52,33 @@
       "type" : "RestClientCall",
       "name" : "Create Issue",
       "config" : {
-        "path" : "/issue/",
-        "bodyObjectMapping" : {
-          "param" : "in.issueParent"
-        },
-        "clientId" : "a5b21baf-2b4f-44ac-a9e7-9c1b0607e0a6",
-        "clientErrorCode" : "ivy:error:rest:client",
         "method" : "POST",
-        "statusErrorCode" : "ivy:error:rest:client",
-        "responseMapping" : {
-          "out.issueParent.key" : "result.key"
+        "target" : {
+          "clientId" : "a5b21baf-2b4f-44ac-a9e7-9c1b0607e0a6",
+          "path" : "/issue/"
         },
-        "bodyObjectType" : "com.axonivy.connector.jira.models.IssueParent",
-        "resultType" : "com.axonivy.connector.jira.models.IssueParent",
-        "bodyInputType" : "ENTITY"
+        "body" : {
+          "entity" : {
+            "type" : "com.axonivy.connector.jira.models.IssueParent",
+            "map" : {
+              "param" : "in.issueParent"
+            }
+          }
+        },
+        "response" : {
+          "entity" : {
+            "type" : "com.axonivy.connector.jira.models.IssueParent",
+            "map" : {
+              "out.issueParent.key" : "result.key"
+            }
+          }
+        }
       },
       "visual" : {
         "at" : { "x" : 224, "y" : 64 }
       },
-      "connect" : { "id" : "f2", "to" : "f1" }
+      "connect" : [
+        { "id" : "f2", "to" : "f1" }
+      ]
     } ]
 }
