@@ -1,5 +1,5 @@
 {
-  "format" : "10.0.0",
+  "$schema" : "https://json-schema.axonivy.com/process/12.0.0/process.json",
   "id" : "17CFE8A85DBFF66A",
   "kind" : "HTML_DIALOG",
   "config" : {
@@ -10,18 +10,18 @@
       "type" : "HtmlDialogStart",
       "name" : "start()",
       "config" : {
-        "callSignature" : "start",
-        "result" : {
-          "params" : [
-            { "name" : "issueParent", "type" : "com.axonivy.connector.jira.models.IssueParent" }
-          ],
-          "map" : {
-            "result.issueParent" : "in.issueParent"
-          }
-        },
+        "signature" : "start",
         "input" : {
           "map" : {
             "out.issueParent" : "new com.axonivy.connector.jira.models.IssueParent()"
+          }
+        },
+        "result" : {
+          "params" : [
+            { "name" : "issueParent", "type" : "com.axonivy.connector.jira.models.IssueParent", "desc" : "" }
+          ],
+          "map" : {
+            "result.issueParent" : "in.issueParent"
           }
         },
         "guid" : "17CFE8A85E3686E6"
@@ -31,7 +31,9 @@
         "size" : { "width" : 24, "height" : 24 },
         "labelOffset" : { "x" : 12, "y" : 35 }
       },
-      "connect" : { "id" : "f2", "to" : "f1" }
+      "connect" : [
+        { "id" : "f2", "to" : "f1" }
+      ]
     }, {
       "id" : "f1",
       "type" : "HtmlDialogEnd",
@@ -49,7 +51,9 @@
         "at" : { "x" : 96, "y" : 160 },
         "labelOffset" : { "x" : 9, "y" : 35 }
       },
-      "connect" : { "id" : "f5", "to" : "f4" }
+      "connect" : [
+        { "id" : "f5", "to" : "f4" }
+      ]
     }, {
       "id" : "f4",
       "type" : "HtmlDialogExit",
