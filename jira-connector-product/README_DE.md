@@ -11,30 +11,3 @@ Dieser Konnektor bietet:
 
   
 Durch die Nutzung des Atlassian Jira Konnektors von Axon Ivy kannst du deine Projektmanagement- und Issue-Tracking-Prozesse optimieren, eine reibungslose Zusammenarbeit gewährleisten und eine effiziente Softwareentwicklung sicherstellen.
-
-## Demo
-
-![jira-connector Demo 1](images/create-issue.png "Create Jira issue")
-![jira-connector Demo 2](images/create-comment.png "Craete Jira comment")
-
-
-## Setup
-
-Open the `Config/variables.yaml` in your Axon Ivy Designer and paste the
-code below and adjust the values to your environment.
-
-```
-Variables:
-
-  jira-connector:
-  
-    # Url to the Jira server
-    Url: "https://localhost"
-
-    # Username to connect to the Jira server
-    Username: "admin"
-
-    # Password to connect to the Jira server
-    Password: "1234"
-```
-
