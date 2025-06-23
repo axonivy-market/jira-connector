@@ -9,10 +9,10 @@ public class SearchProjectResponse {
 	private int maxResults;
 
 	@JsonProperty("startAt")
-	private int startAt;
+	private Long startAt;
 
 	@JsonProperty("total")
-	private int total;
+	private Long total;
 
 	@JsonProperty("isLast")
 	private boolean isLast;
@@ -28,19 +28,19 @@ public class SearchProjectResponse {
 		this.maxResults = maxResults;
 	}
 
-	public int getStartAt() {
+	public Long getStartAt() {
 		return startAt;
 	}
 
-	public void setStartAt(int startAt) {
+	public void setStartAt(Long startAt) {
 		this.startAt = startAt;
 	}
 
-	public int getTotal() {
+	public Long getTotal() {
 		return total;
 	}
 
-	public void setTotal(int total) {
+	public void setTotal(Long total) {
 		this.total = total;
 	}
 
