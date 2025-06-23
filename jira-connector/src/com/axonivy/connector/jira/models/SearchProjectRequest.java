@@ -4,14 +4,14 @@ import java.util.List;
 
 public class SearchProjectRequest {
 
-	private Integer startAt;
+	private Long startAt;
 	private Integer maxResults;
 	private String orderBy;
 	private List<Long> id;
 	private List<String> keys;
 	private String query;
 	private String typeKey;
-	private Integer categoryId;
+	private Long categoryId;
 	private String action;
 	private String expand;
 	private List<String> status;
@@ -20,11 +20,11 @@ public class SearchProjectRequest {
 
 	// Getters and Setters
 
-	public Integer getStartAt() {
+	public Long getStartAt() {
 		return startAt;
 	}
 
-	public void setStartAt(Integer startAt) {
+	public void setStartAt(Long startAt) {
 		this.startAt = startAt;
 	}
 
@@ -76,11 +76,11 @@ public class SearchProjectRequest {
 		this.typeKey = typeKey;
 	}
 
-	public Integer getCategoryId() {
+	public Long getCategoryId() {
 		return categoryId;
 	}
 
-	public void setCategoryId(Integer categoryId) {
+	public void setCategoryId(Long categoryId) {
 		this.categoryId = categoryId;
 	}
 

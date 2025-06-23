@@ -5,58 +5,58 @@ import java.util.List;
 
 public class SearchProjectResponse {
 
-    @JsonProperty("maxResults")
-    private int maxResults;
+	@JsonProperty("maxResults")
+	private int maxResults;
 
-    @JsonProperty("startAt")
-    private int startAt;
+	@JsonProperty("startAt")
+	private int startAt;
 
-    @JsonProperty("total")
-    private int total;
+	@JsonProperty("total")
+	private int total;
 
-    @JsonProperty("isLast")
-    private boolean isLast;
+	@JsonProperty("isLast")
+	private boolean isLast;
 
-    @JsonProperty("values")
-    private List<Project> values;
+	@JsonProperty("values")
+	private List<Project> values;
 
-    public int getMaxResults() {
-        return maxResults;
-    }
+	public int getMaxResults() {
+		return maxResults;
+	}
 
-    public void setMaxResults(int maxResults) {
-        this.maxResults = maxResults;
-    }
+	public void setMaxResults(int maxResults) {
+		this.maxResults = maxResults;
+	}
 
-    public int getStartAt() {
-        return startAt;
-    }
+	public int getStartAt() {
+		return startAt;
+	}
 
-    public void setStartAt(int startAt) {
-        this.startAt = startAt;
-    }
+	public void setStartAt(int startAt) {
+		this.startAt = startAt;
+	}
 
-    public int getTotal() {
-        return total;
-    }
+	public int getTotal() {
+		return total;
+	}
 
-    public void setTotal(int total) {
-        this.total = total;
-    }
+	public void setTotal(int total) {
+		this.total = total;
+	}
 
-    public boolean isLast() {
-        return isLast;
-    }
+	public boolean isLast() {
+		return isLast;
+	}
 
-    public void setLast(boolean last) {
-        isLast = last;
-    }
+	public void setLast(boolean last) {
+		isLast = last;
+	}
 
-    public List<Project> getValues() {
-        return values;
-    }
+	public List<Project> getValues() {
+		return values;
+	}
 
-    public void setValues(List<Project> values) {
-        this.values = values;
-    }
+	public void setValues(List<Project> values) {
+		this.values = values;
+	}
 }
