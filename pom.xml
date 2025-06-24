@@ -3,7 +3,7 @@
   <groupId>com.axonivy.connector.jira</groupId>
   <name>jira-connector</name>
   <artifactId>jira-connector-modules</artifactId>
-  <version>10.0.5-SNAPSHOT</version>
+  <version>10.0.6-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <modules>
