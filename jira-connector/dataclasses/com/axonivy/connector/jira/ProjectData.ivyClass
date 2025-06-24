@@ -1,0 +1,4 @@
+ProjectData #class
+com.axonivy.connector.jira #namespace
+searchResponse com.axonivy.connector.jira.models.SearchProjectResponse #field
+searchRequest com.axonivy.connector.jira.models.SearchProjectRequest #field
