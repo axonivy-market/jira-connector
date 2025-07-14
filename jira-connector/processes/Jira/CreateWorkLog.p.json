@@ -54,7 +54,7 @@
           "path" : "/issue/{issueIdOrKey}/worklog",
           "templateParams" : {
             "issueIdOrKey" : "in.issueParent.key",
-            "ivy.var.jira-connector.Url" : ""
+            "ivy.var.jiraConnector.Url" : ""
           }
         },
         "body" : {

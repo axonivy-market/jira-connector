@@ -17,7 +17,7 @@ class JiraProcessTest {
  
   @BeforeEach
   void beforeEach(AppFixture fixture) { 
-    fixture.var("jira-connector.Url", "{ivy.app.baseurl}/api/jira");
+    fixture.var("jiraConnector.Url", "{ivy.app.baseurl}/api/jira");
   }
 	
   @Test
