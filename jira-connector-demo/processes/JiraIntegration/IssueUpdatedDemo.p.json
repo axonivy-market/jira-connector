@@ -1,5 +1,5 @@
 {
-  "$schema" : "https://json-schema.axonivy.com/process/12.0.0/process.json",
+  "$schema" : "https://json-schema.axonivy.com/process/13.1.2/process.json",
   "id" : "17CFE8F33D99A7D1",
   "config" : {
     "data" : "com.axonivy.connector.jira.demo.Data"
@@ -75,7 +75,7 @@
           "name" : "Jira issue updated",
           "responsible" : {
             "type" : "USER_FROM_ATTRIBUTE",
-            "activator" : "in.issueParent.fields.reporter.key"
+            "script" : "in.issueParent.fields.reporter.key"
           }
         },
         "case" : {

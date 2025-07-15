@@ -26,7 +26,7 @@ code below and adjust the values to your environment.
 ```
 Variables:
 
-  jira-connector:
+  jiraConnector:
   
     # Url to the Jira server
     Url: "https://localhost"
@@ -37,3 +37,5 @@ Variables:
     # Password to connect to the Jira server
     Password: "1234"
 ```
+> [!NOTE]
+> The variable path `jira-connector` is renamed to `jiraConnector` from 13.

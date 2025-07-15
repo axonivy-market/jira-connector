@@ -1,5 +1,5 @@
 {
-  "$schema" : "https://json-schema.axonivy.com/process/12.0.0/process.json",
+  "$schema" : "https://json-schema.axonivy.com/process/13.1.2/process.json",
   "id" : "1979AB2D890B4AFE",
   "kind" : "CALLABLE_SUB",
   "config" : {
@@ -50,7 +50,7 @@
           "clientId" : "a5b21baf-2b4f-44ac-a9e7-9c1b0607e0a6",
           "path" : "/project/search",
           "templateParams" : {
-            "ivy.var.jira-connector.Url" : ""
+            "ivy.var.jiraConnector.Url" : ""
           },
           "queryParams" : {
             "maxResults" : "in.searchRequest.maxResults",

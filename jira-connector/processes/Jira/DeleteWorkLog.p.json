@@ -1,5 +1,5 @@
 {
-  "$schema" : "https://json-schema.axonivy.com/process/12.0.0/process.json",
+  "$schema" : "https://json-schema.axonivy.com/process/13.1.2/process.json",
   "id" : "192471817E472F6F",
   "kind" : "CALLABLE_SUB",
   "config" : {
@@ -50,7 +50,7 @@
           "path" : "/issue/{key}/worklog/{id}",
           "templateParams" : {
             "key" : "in.issueParent.key",
-            "ivy.var.jira-connector.Url" : "",
+            "ivy.var.jiraConnector.Url" : "",
             "id" : "in.workLog.id"
           },
           "queryParams" : {
