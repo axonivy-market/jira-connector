@@ -1,6 +1,213 @@
 {
-  "key": "JIRA-123",
-  "fields": {
-  	"summary": "Summary of JIRA-123"
-  }
+	"expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations",
+	"id": "10003",
+	"self": "https://localhost:8080.atlassian.net/rest/api/2/issue/10003",
+	"key": "SCRUM-3",
+	"fields": {
+		"statuscategorychangedate": "2025-07-21T13:05:18.214+0700",
+		"issuetype": {
+			"self": "https://localhost:8080.atlassian.net/rest/api/2/issuetype/10003",
+			"id": "10003",
+			"description": "Tasks track small, distinct pieces of work.",
+			"iconUrl": "https://localhost:8080.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10318?size=medium",
+			"name": "Task",
+			"subtask": false,
+			"avatarId": 10318,
+			"entityId": "6a5cfce5-3ef2-4b53-b7e0-091a79f755b4",
+			"hierarchyLevel": 0
+		},
+		"parent": {
+			"id": "10000",
+			"key": "SCRUM-1",
+			"self": "https://localhost:8080.atlassian.net/rest/api/2/issue/10000",
+			"fields": {
+				"summary": "(Sample) Personal Website Overhaul",
+				"status": {
+					"self": "https://localhost:8080.atlassian.net/rest/api/2/status/10001",
+					"description": "",
+					"iconUrl": "https://localhost:8080.atlassian.net/images/icons/statuses/generic.png",
+					"name": "In Progress",
+					"id": "10001",
+					"statusCategory": {
+						"self": "https://localhost:8080.atlassian.net/rest/api/2/statuscategory/4",
+						"id": 4,
+						"key": "indeterminate",
+						"colorName": "yellow",
+						"name": "In Progress"
+					}
+				},
+				"priority": {
+					"self": "https://localhost:8080.atlassian.net/rest/api/2/priority/3",
+					"iconUrl": "https://localhost:8080.atlassian.net/images/icons/priorities/medium_new.svg",
+					"name": "Medium",
+					"id": "3"
+				},
+				"issuetype": {
+					"self": "https://localhost:8080.atlassian.net/rest/api/2/issuetype/10001",
+					"id": "10001",
+					"description": "Epics track collections of related bugs, stories, and tasks.",
+					"iconUrl": "https://localhost:8080.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10307?size=medium",
+					"name": "Epic",
+					"subtask": false,
+					"avatarId": 10307,
+					"entityId": "f37ee584-b005-482c-8096-5ce6e72c11a2",
+					"hierarchyLevel": 1
+				}
+			}
+		},
+		"timespent": null,
+		"project": {
+			"self": "https://localhost:8080.atlassian.net/rest/api/2/project/10000",
+			"id": "10000",
+			"key": "SCRUM",
+			"name": "Octopus-AxonIvy",
+			"projectTypeKey": "software",
+			"simplified": true,
+			"avatarUrls": {
+				"48x48": "https://localhost:8080.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10400",
+				"24x24": "https://localhost:8080.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10400?size=small",
+				"16x16": "https://localhost:8080.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10400?size=xsmall",
+				"32x32": "https://localhost:8080.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10400?size=medium"
+			}
+		},
+		"fixVersions": [
+		],
+		"customfield_10033": null,
+		"aggregatetimespent": null,
+		"statusCategory": {
+			"self": "https://localhost:8080.atlassian.net/rest/api/2/statuscategory/2",
+			"id": 2,
+			"key": "new",
+			"colorName": "blue-gray",
+			"name": "To Do"
+		},
+		"resolution": null,
+		"resolutiondate": null,
+		"workratio": -1,
+		"issuerestriction": {
+			"issuerestrictions": {
+			},
+			"shouldDisplay": true
+		},
+		"watches": {
+			"self": "https://localhost:8080.atlassian.net/rest/api/2/issue/SCRUM-3/watchers",
+			"watchCount": 1,
+			"isWatching": true
+		},
+		"lastViewed": null,
+		"created": "2025-07-21T13:05:17.920+0700",
+		"customfield_10020": [
+			{
+				"id": 2,
+				"name": "SCRUM Sprint 0",
+				"state": "active",
+				"boardId": 1,
+				"startDate": "2025-07-21T06:05:18.804Z",
+				"endDate": "2025-08-04T06:05:18.804Z"
+			}
+		],
+		"customfield_10021": null,
+		"priority": null,
+		"labels": [
+		],
+		"customfield_10016": null,
+		"customfield_10019": "0|i0000f:",
+		"timeestimate": null,
+		"aggregatetimeoriginalestimate": null,
+		"versions": [
+		],
+		"issuelinks": [
+		],
+		"assignee": null,
+		"updated": "2025-07-21T13:05:19.035+0700",
+		"status": {
+			"self": "https://localhost:8080.atlassian.net/rest/api/2/status/10000",
+			"description": "",
+			"iconUrl": "https://localhost:8080.atlassian.net/images/icons/statuses/generic.png",
+			"name": "To Do",
+			"id": "10000",
+			"statusCategory": {
+				"self": "https://localhost:8080.atlassian.net/rest/api/2/statuscategory/2",
+				"id": 2,
+				"key": "new",
+				"colorName": "blue-gray",
+				"name": "To Do"
+			}
+		},
+		"components": [
+		],
+		"timeoriginalestimate": null,
+		"description": "Adjust template sections and font sizes to ensure the website looks clean and readable on mobile devices.",
+		"timetracking": {
+		},
+		"customfield_10015": null,
+		"security": null,
+		"attachment": [
+		],
+		"aggregatetimeestimate": null,
+		"summary": "(Sample) Optimize Site for Mobile View",
+		"creator": {
+			"self": "https://localhost:8080.atlassian.net/rest/api/2/user?accountId=712020%3A62df8cc7-3c71-4c50-895d-fc01c9208d3f",
+			"accountId": "712020:62df8cc7-3c71-4c50-895d-fc01c9208d3f",
+			"emailAddress": "hcmc-octopus@axonactive.com",
+			"avatarUrls": {
+				"48x48": "https://secure.gravatar.com/avatar/1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FO-3.png",
+				"24x24": "https://secure.gravatar.com/avatar/1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FO-3.png",
+				"16x16": "https://secure.gravatar.com/avatar/1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FO-3.png",
+				"32x32": "https://secure.gravatar.com/avatar/1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FO-3.png"
+			},
+			"displayName": "Octopus",
+			"active": true,
+			"timeZone": "Asia/Saigon",
+			"accountType": "atlassian"
+		},
+		"subtasks": [
+		],
+		"reporter": {
+			"self": "https://localhost:8080.atlassian.net/rest/api/2/user?accountId=712020%3A62df8cc7-3c71-4c50-895d-fc01c9208d3f",
+			"accountId": "712020:62df8cc7-3c71-4c50-895d-fc01c9208d3f",
+			"emailAddress": "hcmc-octopus@axonactive.com",
+			"avatarUrls": {
+				"48x48": "https://secure.gravatar.com/avatar/1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FO-3.png",
+				"24x24": "https://secure.gravatar.com/avatar/1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FO-3.png",
+				"16x16": "https://secure.gravatar.com/avatar/1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FO-3.png",
+				"32x32": "https://secure.gravatar.com/avatar/1?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FO-3.png"
+			},
+			"displayName": "Octopus",
+			"active": true,
+			"timeZone": "Asia/Saigon",
+			"accountType": "atlassian"
+		},
+		"aggregateprogress": {
+			"progress": 0,
+			"total": 0
+		},
+		"customfield_10001": null,
+		"environment": null,
+		"duedate": null,
+		"progress": {
+			"progress": 0,
+			"total": 0
+		},
+		"votes": {
+			"self": "https://localhost:8080.atlassian.net/rest/api/2/issue/SCRUM-3/votes",
+			"votes": 0,
+			"hasVoted": false
+		},
+		"comment": {
+			"comments": [
+			],
+			"self": "https://localhost:8080.atlassian.net/rest/api/2/issue/10003/comment",
+			"maxResults": 0,
+			"total": 0,
+			"startAt": 0
+		},
+		"worklog": {
+			"startAt": 0,
+			"maxResults": 20,
+			"total": 0,
+			"worklogs": [
+			]
+		}
+	}
 }

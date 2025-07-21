@@ -1,0 +1,28 @@
+{
+	"self": "https://localhost:8080/rest/api/2/issue/10008/worklog/10000",
+	"author": {
+		"self": "https://localhost:8080/rest/api/2/user?accountId=712020%3A62df8cc7-3c71-4c50-895d-fc01c9208d3f",
+		"accountId": "712020:62df8cc7-3c71-4c50-895d-fc01c9208d3f",
+		"emailAddress": "hcmc-octopus@axonactive.com",
+		"displayName": "Octopus",
+		"active": true,
+		"timeZone": "Asia/Saigon",
+		"accountType": "atlassian"
+	},
+	"updateAuthor": {
+		"self": "https://localhost:8080/rest/api/2/user?accountId=712020%3A62df8cc7-3c71-4c50-895d-fc01c9208d3f",
+		"accountId": "712020:62df8cc7-3c71-4c50-895d-fc01c9208d3f",
+		"emailAddress": "hcmc-octopus@axonactive.com",
+		"displayName": "Octopus",
+		"active": true,
+		"timeZone": "Asia/Saigon",
+		"accountType": "atlassian"
+	},
+	"created": "2025-07-21T13:32:01.676+0700",
+	"updated": "2025-07-21T13:32:01.676+0700",
+	"started": "2025-07-21T13:32:01.646+0700",
+	"timeSpent": "0m",
+	"timeSpentSeconds": 0,
+	"id": "10000",
+	"issueId": "10008"
+}

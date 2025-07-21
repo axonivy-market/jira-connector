@@ -1,0 +1,24 @@
+{
+	"self": "https://Localhost:8080/rest/api/2/project/search?maxResults=50&orderBy=key&properties=key%2Cname&startAt=0&status=live",
+	"maxResults": 50,
+	"startAt": 0,
+	"total": 1,
+	"isLast": true,
+	"values": [
+		{
+			"expand": "description,lead,issueTypes,url,projectKeys,permissions,insight",
+			"self": "https://Localhost:8080/rest/api/2/project/10000",
+			"id": "10000",
+			"key": "SCRUM",
+			"name": "Octopus-AxonIvy",
+			"projectTypeKey": "software",
+			"simplified": true,
+			"style": "next-gen",
+			"isPrivate": false,
+			"properties": {
+			},
+			"entityId": "8c5e2e4f-ee1e-402a-93d9-794bbd728e16",
+			"uuid": "8c5e2e4f-ee1e-402a-93d9-794bbd728e16"
+		}
+	]
+}

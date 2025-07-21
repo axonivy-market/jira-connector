@@ -1,0 +1,9 @@
+{
+	"self": "https://localhost:8080/rest/api/2/project/search?maxResults=50&orderBy=key&properties=key%2Cname&startAt=0&status=live",
+	"maxResults": 50,
+	"startAt": 0,
+	"total": 1,
+	"isLast": true,
+	"values": [
+	]
+}
