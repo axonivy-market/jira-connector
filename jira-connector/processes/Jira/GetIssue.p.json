@@ -75,11 +75,7 @@
               "map" : {
                 "out" : "in",
                 "out.error" : "error"
-              },
-              "code" : [
-                "",
-                "  ivy.log.warn(error.toString());"
-              ]
+              }
             }
           },
           "visual" : {
