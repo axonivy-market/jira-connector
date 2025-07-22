@@ -4,20 +4,20 @@
 	"total": 1,
 	"worklogs": [
 		{
-			"self": "https://axonactive-team.atlassian.net/rest/api/2/issue/10008/worklog/10000",
+			"self": "https://localhost:8080/rest/api/2/issue/10008/worklog/10000",
 			"author": {
-				"self": "https://axonactive-team.atlassian.net/rest/api/2/user?accountId=712020%3A62df8cc7-3c71-4c50-895d-fc01c9208d3f",
+				"self": "https://localhost:8080/rest/api/2/user?accountId=712020%3A62df8cc7-3c71-4c50-895d-fc01c9208d3f",
 				"accountId": "712020:62df8cc7-3c71-4c50-895d-fc01c9208d3f",
-				"emailAddress": "hcmc-octopus@axonactive.com",
+				"emailAddress": "hcmc-octopus@ivy.com",
 				"displayName": "Octopus",
 				"active": true,
 				"timeZone": "Asia/Saigon",
 				"accountType": "atlassian"
 			},
 			"updateAuthor": {
-				"self": "https://axonactive-team.atlassian.net/rest/api/2/user?accountId=712020%3A62df8cc7-3c71-4c50-895d-fc01c9208d3f",
+				"self": "https://localhost:8080/rest/api/2/user?accountId=712020%3A62df8cc7-3c71-4c50-895d-fc01c9208d3f",
 				"accountId": "712020:62df8cc7-3c71-4c50-895d-fc01c9208d3f",
-				"emailAddress": "hcmc-octopus@axonactive.com",
+				"emailAddress": "hcmc-octopus@ivy.com",
 				"displayName": "Octopus",
 				"active": true,
 				"timeZone": "Asia/Saigon",

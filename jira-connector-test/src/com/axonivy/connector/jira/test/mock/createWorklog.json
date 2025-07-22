@@ -3,7 +3,7 @@
 	"author": {
 		"self": "https://localhost:8080/rest/api/2/user?accountId=712020%3A62df8cc7-3c71-4c50-895d-fc01c9208d3f",
 		"accountId": "712020:62df8cc7-3c71-4c50-895d-fc01c9208d3f",
-		"emailAddress": "hcmc-octopus@axonactive.com",
+		"emailAddress": "hcmc-octopus@ivy.com",
 		"displayName": "Octopus",
 		"active": true,
 		"timeZone": "Asia/Saigon",
@@ -12,7 +12,7 @@
 	"updateAuthor": {
 		"self": "https://localhost:8080/rest/api/2/user?accountId=712020%3A62df8cc7-3c71-4c50-895d-fc01c9208d3f",
 		"accountId": "712020:62df8cc7-3c71-4c50-895d-fc01c9208d3f",
-		"emailAddress": "hcmc-octopus@axonactive.com",
+		"emailAddress": "hcmc-octopus@ivy.com",
 		"displayName": "Octopus",
 		"active": true,
 		"timeZone": "Asia/Saigon",
