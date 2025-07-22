@@ -21,30 +21,28 @@ import io.swagger.v3.oas.annotations.Hidden;
 @Hidden
 public class JiraServiceMock {
 
-	@POST
-	@Path("issue/{key}/comment")
-	@Consumes(MediaType.APPLICATION_JSON)
-	@Produces(MediaType.APPLICATION_JSON)
-	public Response createComment(@PathParam(value = "key") String issueKey) {
-		return Response.status(201).entity(load("createComment.json")).build();
-	}
+  @POST
+  @Path("issue/{key}/comment")
+  @Consumes(MediaType.APPLICATION_JSON)
+  @Produces(MediaType.APPLICATION_JSON)
+  public Response createComment(@PathParam(value = "key") String issueKey) {
+    return Response.status(201).entity(load("createComment.json")).build();
+  }
 
-	@POST
-	@Path("issue")
-	@Consumes(MediaType.APPLICATION_JSON)
-	@Produces(MediaType.APPLICATION_JSON)
-	public Response createIssue() {
-		return Response.status(201).entity(load("createIssue.json")).build();
-	}
-	
+  @POST
+  @Path("issue")
+  @Consumes(MediaType.APPLICATION_JSON)
+  @Produces(MediaType.APPLICATION_JSON)
+  public Response createIssue() {
+    return Response.status(201).entity(load("createIssue.json")).build();
+  }
+
   @GET
   @Path("issue/{issueKey}")
   @Produces(MediaType.APPLICATION_JSON)
   public Response readIssue(@PathParam("issueKey") String issueKey) {
     return Response.status(200).entity(load("issue.json")).build();
   }
-
-
 
   @POST
   @Path("issue/{key}/worklog")
@@ -73,13 +71,6 @@ public class JiraServiceMock {
   @Path("project/search")
   @Produces(MediaType.APPLICATION_JSON)
   public Response projectSearch() {
-    return Response.status(200).entity(load("project.json")).build();
-  }
-
-  @POST
-  @Path("search")
-  @Produces(MediaType.APPLICATION_JSON)
-  public Response searchIssue() {
     return Response.status(200).entity(load("project.json")).build();
   }
 

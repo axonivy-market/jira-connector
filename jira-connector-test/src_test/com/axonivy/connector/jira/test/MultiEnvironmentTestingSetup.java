@@ -19,26 +19,30 @@ import ch.ivyteam.ivy.rest.client.mapper.JsonFeature;
 @ExtendWith(MultiEnvironmentContextProvider.class)
 public class MultiEnvironmentTestingSetup {
 
-	@BeforeEach
-	void setUpConfigForContext(ExtensionContext context, AppFixture fixture, IApplication app) {
-		switch (context.getDisplayName()) {
-		case TestEnvironmentConstants.REAL_CALL_CONTEXT_DISPLAY_NAME:
-			setUpConfigForApiTest(fixture);
-			break;
-		case TestEnvironmentConstants.MOCK_SERVER_CONTEXT_DISPLAY_NAME:
-			setUpConfigForMockServer(fixture, app);
-			break;
-		default:
-			break;
-		}
-	}
+  @BeforeEach
+  void setUpConfigForContext(ExtensionContext context, AppFixture fixture, IApplication app) {
+    switch (context.getDisplayName()) {
+    case TestEnvironmentConstants.REAL_CALL_CONTEXT_DISPLAY_NAME:
+      setUpConfigForApiTest(fixture);
+      break;
+    case TestEnvironmentConstants.MOCK_SERVER_CONTEXT_DISPLAY_NAME:
+      setUpConfigForMockServer(fixture, app);
+      break;
+    default:
+      break;
+    }
+  }
 
-	public static void setUpConfigForApiTest(AppFixture fixture) {
-	}
+  public static void setUpConfigForApiTest(AppFixture fixture) {
+    fixture.var("jiraConnector.Url", System.getProperty(TestEnvironmentConstants.URL_PROPERTY_NAME));
+    fixture.var("jiraConnector.Username", System.getProperty(TestEnvironmentConstants.USERNAME_PROPERTY_NAME));
+    fixture.var("jiraConnector.Password", System.getProperty(TestEnvironmentConstants.PASSWORD_PROPERTY_NAME));
 
-	public static void setUpConfigForMockServer(AppFixture fixture, IApplication app) {
-		fixture.config("RestClients.Jira.Features",
-				List.of(MockCallHeaderFeature.class.getName(), JsonFeature.class.getName()));
-		fixture.var("jiraConnector.Url", "{ivy.app.baseurl}/api/jiraMock");
-	}
+  }
+
+  public static void setUpConfigForMockServer(AppFixture fixture, IApplication app) {
+    fixture.config("RestClients.Jira.Features",
+        List.of(MockCallHeaderFeature.class.getName(), JsonFeature.class.getName()));
+    fixture.var("jiraConnector.Url", "{ivy.app.baseurl}/api/jiraMock");
+  }
 }
