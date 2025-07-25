@@ -20,6 +20,14 @@
             "out.comment" : "param.comment",
             "out.issueParent.key" : "param.issueKey"
           }
+        },
+        "result" : {
+          "params" : [
+            { "name" : "error", "type" : "ch.ivyteam.ivy.bpm.error.BpmError", "desc" : "" }
+          ],
+          "map" : {
+            "result.error" : "in.#error"
+          }
         }
       },
       "visual" : {
@@ -60,6 +68,24 @@
       "visual" : {
         "at" : { "x" : 224, "y" : 64 }
       },
+      "boundaries" : [ {
+          "id" : "f5",
+          "type" : "ErrorBoundaryEvent",
+          "config" : {
+            "output" : {
+              "map" : {
+                "out" : "in",
+                "out.error" : "error"
+              }
+            }
+          },
+          "visual" : {
+            "at" : { "x" : 272, "y" : 106 }
+          },
+          "connect" : [
+            { "id" : "f6", "to" : "f1" }
+          ]
+        } ],
       "connect" : [
         { "id" : "f2", "to" : "f1" }
       ]
