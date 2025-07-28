@@ -21,10 +21,12 @@
         },
         "result" : {
           "params" : [
-            { "name" : "issueParent", "type" : "com.axonivy.connector.jira.models.IssueParent", "desc" : "" }
+            { "name" : "issueParent", "type" : "com.axonivy.connector.jira.models.IssueParent", "desc" : "" },
+            { "name" : "error", "type" : "ch.ivyteam.ivy.bpm.error.BpmError", "desc" : "" }
           ],
           "map" : {
-            "result.issueParent" : "in.issueParent"
+            "result.issueParent" : "in.issueParent",
+            "result.error" : "in.#error"
           }
         }
       },
@@ -65,6 +67,24 @@
       "visual" : {
         "at" : { "x" : 224, "y" : 64 }
       },
+      "boundaries" : [ {
+          "id" : "f5",
+          "type" : "ErrorBoundaryEvent",
+          "config" : {
+            "output" : {
+              "map" : {
+                "out" : "in",
+                "out.error" : "error"
+              }
+            }
+          },
+          "visual" : {
+            "at" : { "x" : 256, "y" : 106 }
+          },
+          "connect" : [
+            { "id" : "f6", "to" : "f1" }
+          ]
+        } ],
       "connect" : [
         { "id" : "f2", "to" : "f1" }
       ]

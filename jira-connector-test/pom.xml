@@ -1,23 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.axonivy.ivy.api</groupId>
     <artifactId>ivy-project-parent</artifactId>
     <version>13.1.1</version>
-    <relativePath />
+    <relativePath></relativePath>
   </parent>
   <groupId>com.axonivy.connector.jira</groupId>
   <artifactId>jira-connector-test</artifactId>
   <version>13.1.3-SNAPSHOT</version>
   <packaging>iar</packaging>
   <dependencies>
-    <dependency>
-      <groupId>com.axonivy.connector.jira</groupId>
-      <artifactId>jira-connector-demo</artifactId>
-      <version>${project.version}</version>
-      <type>iar</type>
-    </dependency>
     <dependency>
       <groupId>com.axonivy.connector.jira</groupId>
       <artifactId>jira-connector</artifactId>
@@ -73,6 +68,30 @@
         <groupId>com.axonivy.ivy.ci</groupId>
         <artifactId>project-build-plugin</artifactId>
         <extensions>true</extensions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <version>3.0.0-M1</version>
+        <configuration>
+          <skip>true</skip>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <configuration>
+          <systemPropertyVariables>
+            <url>${jiraConnector.url}</url>
+            <username>${jiraConnector.username}</username>
+            <password>${jiraConnector.password}</password>
+          </systemPropertyVariables>
+          <statelessTestsetReporter implementation="org.apache.maven.plugin.surefire.extensions.junit5.JUnit5Xml30StatelessReporter">
+            <disable>false</disable>
+            <usePhrasedFileName>false</usePhrasedFileName>
+            <usePhrasedTestSuiteClassName>true</usePhrasedTestSuiteClassName>
+            <usePhrasedTestCaseClassName>true</usePhrasedTestCaseClassName>
+            <usePhrasedTestCaseMethodName>true</usePhrasedTestCaseMethodName>
+          </statelessTestsetReporter>
+        </configuration>
       </plugin>
     </plugins>
   </build>
