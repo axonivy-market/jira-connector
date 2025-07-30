@@ -13,3 +13,5 @@ permissions:
 jobs:
   build:
     uses: axonivy-market/github-workflows/.github/workflows/dev.yml@v6
+    secrets:
+      mvnArgs: -DjiraConnector.url="${{secrets.URL}}" -DjiraConnector.username="${{secrets.USERNAME}}" -DjiraConnector.password="${{secrets.PASSWORD}}"
