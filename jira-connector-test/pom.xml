@@ -83,6 +83,7 @@
             <url>${jiraConnector.url}</url>
             <username>${jiraConnector.username}</username>
             <password>${jiraConnector.password}</password>
+            <testEnvironment>${testEnvironment}</testEnvironment>
           </systemPropertyVariables>
           <statelessTestsetReporter implementation="org.apache.maven.plugin.surefire.extensions.junit5.JUnit5Xml30StatelessReporter">
             <disable>false</disable>
