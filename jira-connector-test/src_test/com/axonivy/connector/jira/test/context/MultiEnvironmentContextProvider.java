@@ -34,7 +34,7 @@ public class MultiEnvironmentContextProvider implements TestTemplateInvocationCo
 	private class TestEnvironmentInvocationContext implements TestTemplateInvocationContext {
 		private String contextDisplayName;
 
-		private TestEnironmentInvocationContext(String contextDisplayName) {
+		private TestEnvironmentInvocationContext(String contextDisplayName) {
 			this.contextDisplayName = contextDisplayName;
 		}
 
