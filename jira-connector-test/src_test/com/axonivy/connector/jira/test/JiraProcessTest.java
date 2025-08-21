@@ -26,7 +26,6 @@ import ch.ivyteam.ivy.environment.AppFixture;
 import ch.ivyteam.ivy.rest.client.mapper.JsonFeature;
 
 @IvyProcessTest(enableWebServer = true)
-
 @ExtendWith(MultiEnvironmentContextProvider.class)
 class JiraProcessTest {
   private boolean isRealTest;
