@@ -1,22 +1,35 @@
 package com.axonivy.connector.jira.test;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static com.axonivy.utils.e2etest.enums.E2EEnvironment.REAL_SERVER;
 
 import java.util.List;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.TestTemplate;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.api.extension.ExtensionContext;
 
 import com.axonivy.connector.jira.models.SearchProjectRequest;
 import com.axonivy.connector.jira.models.WorkLog;
 import com.axonivy.connector.jira.test.constant.TestEnvironmentConstants;
+import com.axonivy.connector.jira.test.feature.MockCallHeaderFeature;
+import com.axonivy.utils.e2etest.context.MultiEnvironmentContextProvider;
+import com.axonivy.utils.e2etest.utils.E2ETestUtils;
 
 import ch.ivyteam.ivy.bpm.engine.client.BpmClient;
 import ch.ivyteam.ivy.bpm.engine.client.ExecutionResult;
 import ch.ivyteam.ivy.bpm.engine.client.element.BpmElement;
 import ch.ivyteam.ivy.bpm.engine.client.element.BpmProcess;
+import ch.ivyteam.ivy.bpm.exec.client.IvyProcessTest;
+import ch.ivyteam.ivy.environment.AppFixture;
+import ch.ivyteam.ivy.rest.client.mapper.JsonFeature;
 
-class JiraProcessTest extends MultiEnvironmentTestingSetup {
+@IvyProcessTest(enableWebServer = true)
+
+@ExtendWith(MultiEnvironmentContextProvider.class)
+class JiraProcessTest {
+  private boolean isRealTest;
 
   private interface PROCESS {
     BpmProcess CREATE_COMMENT = BpmProcess.path("Jira/CreateComment");
@@ -26,6 +39,12 @@ class JiraProcessTest extends MultiEnvironmentTestingSetup {
     BpmProcess GET_ISSUE = BpmProcess.path("Jira/GetIssue");
     BpmProcess GET_WORK_LOG = BpmProcess.path("Jira/GetIssueWorkLogs");
     BpmProcess GET_PROJECTS = BpmProcess.path("Jira/GetProjects");
+  }
+
+  @BeforeEach
+  void setup(ExtensionContext context, AppFixture fixture) {
+    isRealTest = context.getDisplayName().equals(REAL_SERVER.getDisplayName());
+    E2ETestUtils.determineConfigForContext(context.getDisplayName(), runRealEnv(fixture), runMockEnv(fixture));
   }
 
   @TestTemplate
@@ -39,16 +58,16 @@ class JiraProcessTest extends MultiEnvironmentTestingSetup {
   @TestTemplate
   void test_createIssue(BpmClient bpmClient) {
     BpmElement startable = PROCESS.CREATE_ISSUE.elementName("call(String,String,String,String)");
-    ExecutionResult result = bpmClient.start().subProcess(startable).execute("SCRUM", "Task", "test ticket",
-        "test summary");
+    ExecutionResult result =
+        bpmClient.start().subProcess(startable).execute("SCRUM", "Task", "test ticket", "test summary");
     com.axonivy.connector.jira.Data testData = (com.axonivy.connector.jira.Data) result.data().last();
     assertThat(testData.getIssueParent().getKey()).isNotBlank();
   }
 
   @TestTemplate
   void test_worklog(ExtensionContext context, BpmClient bpmClient) throws InterruptedException {
-    ExecutionResult result = bpmClient.start().subProcess(PROCESS.GET_WORK_LOG.elementName("call(String)"))
-        .execute("SCRUM-9");
+    ExecutionResult result =
+        bpmClient.start().subProcess(PROCESS.GET_WORK_LOG.elementName("call(String)")).execute("SCRUM-9");
     com.axonivy.connector.jira.Data testData = (com.axonivy.connector.jira.Data) result.data().last();
     List<WorkLog> workLogs = testData.getIssueWorkLogs().getWorklogs();
     assertThat(workLogs.size()).isEqualTo(1);
@@ -60,7 +79,7 @@ class JiraProcessTest extends MultiEnvironmentTestingSetup {
     testData = (com.axonivy.connector.jira.Data) result.data().last();
     assertThat(testData.getError()).isNull();
 
-    if (TestEnvironmentConstants.REAL_CALL_CONTEXT_DISPLAY_NAME.equals(context.getDisplayName())) {
+    if (isRealTest) {
       result = bpmClient.start().subProcess(PROCESS.GET_WORK_LOG.elementName("call(String)")).execute("SCRUM-9");
       testData = (com.axonivy.connector.jira.Data) result.data().last();
       assertThat(testData.getIssueWorkLogs().getWorklogs().size()).isEqualTo(0);
@@ -74,7 +93,7 @@ class JiraProcessTest extends MultiEnvironmentTestingSetup {
     workLogId = testData.getWorkLog().getId();
     assertThat(workLogId).isNotBlank();
 
-    if (TestEnvironmentConstants.REAL_CALL_CONTEXT_DISPLAY_NAME.equals(context.getDisplayName())) {
+    if (isRealTest) {
       result = bpmClient.start().subProcess(PROCESS.GET_WORK_LOG.elementName("call(String)")).execute("SCRUM-9");
       testData = (com.axonivy.connector.jira.Data) result.data().last();
       assertThat(testData.getIssueWorkLogs().getWorklogs().size()).isEqualTo(1);
@@ -97,5 +116,21 @@ class JiraProcessTest extends MultiEnvironmentTestingSetup {
     com.axonivy.connector.jira.ProjectData projectData = (com.axonivy.connector.jira.ProjectData) result.data().last();
     assertThat(projectData.getSearchResponse().getValues().size()).isEqualTo(1);
     assertThat(projectData.getSearchResponse().getValues().get(0).getName()).isEqualTo("Octopus-AxonIvy");
+  }
+
+  private Runnable runRealEnv(AppFixture fixture) {
+    return () -> {
+      fixture.var("jiraConnector.Url", System.getProperty(TestEnvironmentConstants.URL_PROPERTY_NAME));
+      fixture.var("jiraConnector.Username", System.getProperty(TestEnvironmentConstants.USERNAME_PROPERTY_NAME));
+      fixture.var("jiraConnector.Password", System.getProperty(TestEnvironmentConstants.PASSWORD_PROPERTY_NAME));
+    };
+  }
+
+  private Runnable runMockEnv(AppFixture fixture) {
+    return () -> {
+      fixture.config("RestClients.Jira.Features",
+          List.of(MockCallHeaderFeature.class.getName(), JsonFeature.class.getName()));
+      fixture.var("jiraConnector.Url", "{ivy.app.baseurl}/api/jiraMock");
+    };
   }
 }
