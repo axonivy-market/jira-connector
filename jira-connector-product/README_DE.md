@@ -1,40 +1,39 @@
-# Jira Anschluss
+# Jira Connector
 
-[Atlassian Jira](https://www.atlassian.com/software/jira) ist ein weit-benutzt
-Projekt Management und Sachverhalt #rückverfolgen Tool jene Hilfen Mannschaften
-planen genügend, Fährte, und Freigabe Software. Es versieht einen
-Nutzer-freundliche Schnittstelle für schaffen Tasks, #zuweisen jene zu
-Gruppenmitglieder, setzend Vorränge und Abgabeschlüsse, und überwachend
-Fortgang.
+[Atlassian Jira](https://www.atlassian.com/software/jira) ist ein weit
+verbreitetes Projektmanagement- und Issue-Tracking-Tool, das Teams dabei
+unterstützt, Software effizient zu planen, zu verfolgen und zu veröffentlichen.
+Es bietet eine benutzerfreundliche Oberfläche zum Erstellen von Aufgaben, zum
+Zuweisen dieser Aufgaben an Teammitglieder, zum Festlegen von Prioritäten und
+Fristen sowie zum Überwachen des Fortschritts.
 
-**#Axon Efeus Atlassian Jira Anschluss** #bruchlos integriert Jiras kraftvolle
-Charakterzüge hinein eure workflows, erlaubend du zu #aushebeln seine
-Fähigkeiten innerhalb eure Arbeitsgänge.
+**Der Atlassian Jira Connector von Axon Ivy** integriert die leistungsstarken
+Funktionen von Jira nahtlos in Ihre Arbeitsabläufe, sodass Sie diese in Ihren
+Prozessen nutzen können.
 
-Diese Anschluss Angebote:
+Dieser Konnektor bietet:
 
-- Drei wesentliche Funktionalitäten: Schaffend Kommentare, schaffend
-  Sachverhalte, und #wiedergewinnen Sachverhalte.
-- Zugang zu dem Innenteil API von Atlassian Jira, aktivierend du zu interagieren
-  #programmatisch mit dem Bahnsteig.
-- Eine Demo Ausführung minimiert jener eure Integration Anstrengung,
-  ermächtigend Bürger Entwickler zu integrieren Jira ohne schreiben
-  irgendwelchen Code.
+- Drei wichtige Funktionen: Kommentare erstellen, Probleme erstellen und
+  Probleme abrufen.
+- Zugriff auf die Kern-API von Atlassian Jira, sodass Sie programmgesteuert mit
+  der Plattform interagieren können.
+- Eine Demo-Implementierung, die Ihren Integrationsaufwand minimiert und Citizen
+  Developers die Möglichkeit gibt, Jira ohne Programmieraufwand zu integrieren.
 
-Mal nutzen #Axon Efeus Atlassian Jira Anschluss, du kannst eure Projekt
-Management und Sachverhalt #windschlüpfig machen #rückverfolgen Arbeitsgänge,
-sichernd glatte Kollaboration und leistungsstarke Software Entwicklung.
+Durch die Verwendung des Atlassian Jira Connectors von Axon Ivy können Sie Ihre
+Projektmanagement- und Issue-Tracking-Prozesse optimieren und so eine
+reibungslose Zusammenarbeit und effiziente Softwareentwicklung gewährleisten.
 
 ## Demo
 
-![jira-Anschluss Demo 1](images/create-issue.png "Schaff Jira Sachverhalt")
-![jira-Anschluss Demo 2](images/create-comment.png "Craete Jira Kommentar")
+![jira-connector Demo 1](images/create-issue.png "Jira-Issue erstellen")
+![jira-connector Demo 2](images/create-comment.png "Jira-Kommentar erstellen")
 
 
 ## Einrichtung
 
-Öffne das `Config/Variablen.yaml` In euren #Axon Efeu Designer und #bekleben
-unten den Code und anpassen die Werte zu eurer Umwelt.
+Öffnen Sie die Datei „ `Config/variables.yaml”` in Ihrem Axon Ivy Designer,
+fügen Sie den folgenden Code ein und passen Sie die Werte an Ihre Umgebung an.
 
 ```
 Variables:
@@ -50,5 +49,5 @@ Variables:
     # Password to connect to the Jira server
     Password: "1234"
 ```
-> [!BEACHTE] Den variablen Pfad `jira-Anschluss` ist #umbenennen zu
-> `jiraConnector` von 13.
+> [!HINWEIS] Der variable Pfad `jira-connector` wurde ab Version 13 in
+> `jiraConnector` umbenannt.
