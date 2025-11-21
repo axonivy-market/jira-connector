@@ -57,7 +57,7 @@
         },
         "bodyObjectType" : "com.axonivy.connector.jira.models.SearchIssue",
         "templateParams" : {
-          "ivy.var.jira-connector.Url" : ""
+          "ivy.var.jira-connector.Urlv3" : ""
         },
         "resultType" : "com.axonivy.connector.jira.models.SearchIssueResult",
         "bodyInputType" : "ENTITY"

@@ -5,6 +5,9 @@ Variables:
     # Url to jira server
     Url: ""
 
+    # Url to jira server v3
+    Urlv3: ""
+
     # Username to connect to the Jira server
     Username: ""
 

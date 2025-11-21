@@ -27,7 +27,8 @@ public class SearchIssue {
 	private int maxResults;
 
 	@JsonProperty("startAt")
-	private int startAt;
+	@JsonInclude(Include.NON_NULL)
+	private Integer startAt;
 
 	@JsonProperty("validateQuery")
 	@JsonInclude(Include.NON_NULL)
@@ -73,11 +74,11 @@ public class SearchIssue {
 		this.maxResults = maxResults;
 	}
 
-	public int getStartAt() {
+	public Integer getStartAt() {
 		return startAt;
 	}
 
-	public void setStartAt(int startAt) {
+	public void setStartAt(Integer startAt) {
 		this.startAt = startAt;
 	}
 

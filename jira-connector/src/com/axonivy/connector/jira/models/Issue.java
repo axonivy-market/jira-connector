@@ -24,6 +24,10 @@ public class Issue {
 	@JsonProperty("issuetype")
 	@JsonInclude(Include.NON_NULL)
 	private Issuetype issuetype = new Issuetype();
+
+	@JsonProperty("parent")
+	@JsonInclude(Include.NON_NULL)
+	private IssueWithKey parent;
 	
 	@JsonProperty("key")
 	@JsonInclude(Include.NON_NULL)
@@ -95,5 +99,11 @@ public class Issue {
 		this.commentList = commentList;
 	}
 
+	public IssueWithKey getParent() {
+		return parent;
+	}
 
+	public void setParent(IssueWithKey parent) {
+		this.parent = parent;
+	}
 }
