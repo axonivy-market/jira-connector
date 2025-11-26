@@ -30,7 +30,7 @@ reibungslose Zusammenarbeit und effiziente Softwareentwicklung gewährleisten.
 ![jira-connector Demo 2](images/create-comment.png "Jira-Kommentar erstellen")
 
 
-## Einrichtung
+## Setup
 
 Öffnen Sie die Datei „ `Config/variables.yaml”` in Ihrem Axon Ivy Designer,
 fügen Sie den folgenden Code ein und passen Sie die Werte an Ihre Umgebung an.
