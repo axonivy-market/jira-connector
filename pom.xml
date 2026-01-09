@@ -7,14 +7,14 @@
   <packaging>pom</packaging>
 
   <modules>
-    <module>${project.name}</module>
-    <module>${project.name}-demo</module>
-    <module>${project.name}-test</module>
-    <module>${project.name}-product</module>
+    <module>jira-connector</module>
+    <module>jira-connector-demo</module>
+    <module>jira-connector-test</module>
+    <module>jira-connector-product</module>
   </modules>
 
   <scm>
-    <developerConnection>scm:git:https://github.com/axonivy-market/${project.name}.git</developerConnection>
+    <developerConnection>scm:git:https://github.com/axonivy-market/jira-connector.git</developerConnection>
     <tag>v10.0.4</tag>
   </scm>
 
