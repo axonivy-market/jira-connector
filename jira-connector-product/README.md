@@ -15,7 +15,7 @@ By utilizing Axon Ivy's Atlassian Jira Connector, you can streamline your projec
 ## Demo
 
 ![jira-connector Demo 1](images/create-issue.png "Create Jira issue")
-![jira-connector Demo 2](images/create-comment.png "Craete Jira comment")
+![jira-connector Demo 2](images/create-comment.png "Create Jira comment")
 
 
 ## Setup
