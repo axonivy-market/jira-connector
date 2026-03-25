@@ -27,7 +27,7 @@ reibungslose Zusammenarbeit und effiziente Softwareentwicklung gewährleisten.
 ## Demo
 
 ![jira-connector Demo 1](images/create-issue.png "Jira-Issue erstellen")
-![jira-connector Demo 2](images/create-comment.png "Jira-Kommentar erstellen")
+![jira-connector Demo 2](images/create-comment.png "Create Jira comment")
 
 
 ## Setup
