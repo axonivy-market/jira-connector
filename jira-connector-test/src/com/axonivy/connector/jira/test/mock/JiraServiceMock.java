@@ -8,6 +8,7 @@ import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
@@ -72,6 +73,14 @@ public class JiraServiceMock {
   @Produces(MediaType.APPLICATION_JSON)
   public Response projectSearch() {
     return Response.status(200).entity(load("project.json")).build();
+  }
+  
+  @PUT
+  @Path("issue/{key}")
+  @Consumes(MediaType.APPLICATION_JSON)
+  @Produces(MediaType.APPLICATION_JSON)
+  public Response putIssueFields(@PathParam(value = "key") String issueKey) {
+	  return Response.noContent().build();
   }
 
   private static String load(String path) {

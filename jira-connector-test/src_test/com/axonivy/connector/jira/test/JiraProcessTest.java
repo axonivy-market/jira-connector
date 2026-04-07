@@ -3,6 +3,7 @@ package com.axonivy.connector.jira.test;
 import static org.assertj.core.api.Assertions.assertThat;
 import static com.axonivy.utils.e2etest.enums.E2EEnvironment.REAL_SERVER;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -38,6 +39,7 @@ class JiraProcessTest {
     BpmProcess GET_ISSUE = BpmProcess.path("Jira/GetIssue");
     BpmProcess GET_WORK_LOG = BpmProcess.path("Jira/GetIssueWorkLogs");
     BpmProcess GET_PROJECTS = BpmProcess.path("Jira/GetProjects");
+    BpmProcess PUT_ISSUE_FIELDS = BpmProcess.path("Jira/PutIssueFields");
   }
 
   @BeforeEach
@@ -106,6 +108,8 @@ class JiraProcessTest {
     com.axonivy.connector.jira.Data testData = (com.axonivy.connector.jira.Data) result.data().last();
     assertThat(testData.getIssueParent().getKey()).isEqualTo("SCRUM-3");
     assertThat(testData.getIssueParent().getFields().getSummary()).isEqualTo("(Sample) Optimize Site for Mobile View");
+    assertThat(testData.getIssueParent().getFields().getTimeOriginalEstimate()).isEqualTo(25200);
+    assertThat(testData.getIssueParent().getFields().getTimeTracking().getOriginalEstimateSeconds()).isEqualTo(25200);
   }
 
   @TestTemplate
@@ -115,6 +119,14 @@ class JiraProcessTest {
     com.axonivy.connector.jira.ProjectData projectData = (com.axonivy.connector.jira.ProjectData) result.data().last();
     assertThat(projectData.getSearchResponse().getValues().size()).isEqualTo(1);
     assertThat(projectData.getSearchResponse().getValues().get(0).getName()).isEqualTo("Octopus-AxonIvy");
+  }
+
+  @TestTemplate
+  void test_putIssueFields(BpmClient bpmClient) {
+    BpmElement startable = PROCESS.PUT_ISSUE_FIELDS.elementName("call(String,Map)");
+    ExecutionResult result = bpmClient.start().subProcess(startable).execute("SCRUM-3", new HashMap<>());
+    com.axonivy.connector.jira.IssueData testData = (com.axonivy.connector.jira.IssueData) result.data().last();
+    assertThat(testData.getError()).isNull();
   }
 
   private Runnable runRealEnv(AppFixture fixture) {
