@@ -63,12 +63,12 @@
     }, {
       "id" : "f5",
       "type" : "Script",
-      "name" : "Convert Map to body",
+      "name" : "Prepare body",
       "config" : {
         "output" : {
           "code" : [
-            "import com.axonivy.connector.jira.utils.JsonUtils;",
-            "in.body = JsonUtils.convertMapToJsonString(in.fields);"
+            "import com.axonivy.connector.jira.utils.IssueUtils;",
+            "in.body = IssueUtils.prepareIssueFields(in.fields);"
           ]
         }
       },
