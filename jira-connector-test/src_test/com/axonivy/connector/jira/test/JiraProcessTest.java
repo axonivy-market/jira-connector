@@ -14,12 +14,12 @@ import ch.ivyteam.ivy.environment.AppFixture;
 
 @IvyProcessTest(enableWebServer = true)
 class JiraProcessTest {
- 
+
   @BeforeEach
   void beforeEach(AppFixture fixture) { 
     fixture.var("jira-connector.Url", "{ivy.app.baseurl}/api/jira");
   }
-	
+
   @Test
   void getIssue(BpmClient bpmClient){
 	var getIssueProcess = BpmProcess.path("Jira/GetIssue");
@@ -28,5 +28,8 @@ class JiraProcessTest {
     com.axonivy.connector.jira.Data testData = (com.axonivy.connector.jira.Data) result.data().last();
     assertThat(testData.getIssueParent().getKey()).isEqualTo("JIRA-123");
     assertThat(testData.getIssueParent().getFields().getSummary()).isEqualTo("Summary of JIRA-123");
+    assertThat(testData.getIssueParent().getFields().getTimeTracking().getOriginalEstimateSeconds()).isEqualTo(25200);
+    assertThat(testData.getIssueParent().getFields().getTimeOriginalEstimate()).isEqualTo(25200);
   }
+
 }
