@@ -7,9 +7,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import ch.ivyteam.ivy.environment.Ivy;
 public class JsonUtils {
-	
+
 	private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
-	
+
 	public static String convertMapToJsonString(Map<String, Object> map) {
 		String jsonBody = null;
 		try {

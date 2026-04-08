@@ -45,8 +45,8 @@ public class Issue {
 	@JsonInclude(Include.NON_NULL)
 	private TimeTracking timeTracking;
 	
-    @JsonProperty("timeoriginalestimate")
-    private Long timeOriginalEstimate;
+	@JsonProperty("timeoriginalestimate")
+	private Long timeOriginalEstimate;
 
 	public Project getProject() {
 		return project;
