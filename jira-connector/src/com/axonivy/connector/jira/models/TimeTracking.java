@@ -3,71 +3,71 @@ package com.axonivy.connector.jira.models;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class TimeTracking {
-	
-    @JsonProperty("originalEstimate")
-    private String originalEstimate;
 
-    @JsonProperty("remainingEstimate")
-    private String remainingEstimate;
+	@JsonProperty("originalEstimate")
+	private String originalEstimate;
 
-    @JsonProperty("timeSpent")
-    private String timeSpent;
+	@JsonProperty("remainingEstimate")
+	private String remainingEstimate;
 
-    @JsonProperty("originalEstimateSeconds")
-    private int originalEstimateSeconds;
+	@JsonProperty("timeSpent")
+	private String timeSpent;
 
-    @JsonProperty("remainingEstimateSeconds")
-    private int remainingEstimateSeconds;
+	@JsonProperty("originalEstimateSeconds")
+	private int originalEstimateSeconds;
 
-    @JsonProperty("timeSpentSeconds")
-    private int timeSpentSeconds;
+	@JsonProperty("remainingEstimateSeconds")
+	private int remainingEstimateSeconds;
 
-    // Getters & Setters
-    public String getOriginalEstimate() {
-        return originalEstimate;
-    }
+	@JsonProperty("timeSpentSeconds")
+	private int timeSpentSeconds;
 
-    public void setOriginalEstimate(String originalEstimate) {
-        this.originalEstimate = originalEstimate;
-    }
+	// Getters & Setters
+	public String getOriginalEstimate() {
+		return originalEstimate;
+	}
 
-    public String getRemainingEstimate() {
-        return remainingEstimate;
-    }
+	public void setOriginalEstimate(String originalEstimate) {
+		this.originalEstimate = originalEstimate;
+	}
 
-    public void setRemainingEstimate(String remainingEstimate) {
-        this.remainingEstimate = remainingEstimate;
-    }
+	public String getRemainingEstimate() {
+		return remainingEstimate;
+	}
 
-    public String getTimeSpent() {
-        return timeSpent;
-    }
+	public void setRemainingEstimate(String remainingEstimate) {
+		this.remainingEstimate = remainingEstimate;
+	}
 
-    public void setTimeSpent(String timeSpent) {
-        this.timeSpent = timeSpent;
-    }
+	public String getTimeSpent() {
+		return timeSpent;
+	}
 
-    public int getOriginalEstimateSeconds() {
-        return originalEstimateSeconds;
-    }
+	public void setTimeSpent(String timeSpent) {
+		this.timeSpent = timeSpent;
+	}
 
-    public void setOriginalEstimateSeconds(int originalEstimateSeconds) {
-        this.originalEstimateSeconds = originalEstimateSeconds;
-    }
+	public int getOriginalEstimateSeconds() {
+		return originalEstimateSeconds;
+	}
 
-    public int getRemainingEstimateSeconds() {
-        return remainingEstimateSeconds;
-    }
+	public void setOriginalEstimateSeconds(int originalEstimateSeconds) {
+		this.originalEstimateSeconds = originalEstimateSeconds;
+	}
 
-    public void setRemainingEstimateSeconds(int remainingEstimateSeconds) {
-        this.remainingEstimateSeconds = remainingEstimateSeconds;
-    }
+	public int getRemainingEstimateSeconds() {
+		return remainingEstimateSeconds;
+	}
 
-    public int getTimeSpentSeconds() {
-        return timeSpentSeconds;
-    }
+	public void setRemainingEstimateSeconds(int remainingEstimateSeconds) {
+		this.remainingEstimateSeconds = remainingEstimateSeconds;
+	}
 
-    public void setTimeSpentSeconds(int timeSpentSeconds) {
-        this.timeSpentSeconds = timeSpentSeconds;
-    }
+	public int getTimeSpentSeconds() {
+		return timeSpentSeconds;
+	}
+
+	public void setTimeSpentSeconds(int timeSpentSeconds) {
+		this.timeSpentSeconds = timeSpentSeconds;
+	}
 }
