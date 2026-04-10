@@ -1,0 +1,23 @@
+{
+  "$schema" : "https://json-schema.axonivy.com/data-class/12.0.0/data-class.json",
+  "simpleName" : "PutFieldData",
+  "namespace" : "com.axonivy.connector.jira.demo.PutField",
+  "isBusinessCaseData" : false,
+  "fields" : [ {
+    "name" : "key",
+    "type" : "String",
+    "modifiers" : [ "PERSISTENT" ]
+  }, {
+    "name" : "fieldId",
+    "type" : "String",
+    "modifiers" : [ "PERSISTENT" ]
+  }, {
+    "name" : "fieldValue",
+    "type" : "String",
+    "modifiers" : [ "PERSISTENT" ]
+  }, {
+    "name" : "fields",
+    "type" : "java.util.Map",
+    "modifiers" : [ "PERSISTENT" ]
+  } ]
+}
