@@ -26,5 +26,9 @@
   }, {
     "name" : "searchResponse",
     "type" : "com.axonivy.connector.jira.models.SearchProjectResponse"
+  }, {
+    "name" : "fields",
+    "type" : "java.util.Map",
+    "modifiers" : [ "PERSISTENT" ]
   } ]
 }

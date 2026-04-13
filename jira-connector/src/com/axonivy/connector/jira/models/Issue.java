@@ -40,6 +40,13 @@ public class Issue {
 	@JsonProperty("comment")
 	@JsonInclude(Include.NON_NULL)
 	private CommentList commentList;
+	
+	@JsonProperty("timetracking")
+	@JsonInclude(Include.NON_NULL)
+	private TimeTracking timeTracking;
+	
+	@JsonProperty("timeoriginalestimate")
+	private Long timeOriginalEstimate;
 
 	public Project getProject() {
 		return project;
@@ -91,9 +98,25 @@ public class Issue {
 	public CommentList getCommentList() {
 		return commentList;
 	}
+	
 	public void setCommentList(CommentList commentList) {
 		this.commentList = commentList;
 	}
+	
+	public TimeTracking getTimeTracking() {
+		return timeTracking;
+	}
+	
+	public void setTimeTracking(TimeTracking timeTracking) {
+		this.timeTracking = timeTracking;
+	}
+	
+	public Long getTimeOriginalEstimate() {
+		return timeOriginalEstimate;
+	}
 
+	public void setTimeOriginalEstimate(Long timeOriginalEstimate) {
+		this.timeOriginalEstimate = timeOriginalEstimate;
+	}
 
 }

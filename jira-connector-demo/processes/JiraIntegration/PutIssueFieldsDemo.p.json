@@ -1,0 +1,70 @@
+{
+  "$schema" : "https://json-schema.axonivy.com/process/12.0.0/process.json",
+  "id" : "19D7546BF5399958",
+  "config" : {
+    "data" : "com.axonivy.connector.jira.demo.Data"
+  },
+  "elements" : [ {
+      "id" : "f0",
+      "type" : "RequestStart",
+      "name" : "start",
+      "config" : {
+        "signature" : "start",
+        "request" : {
+          "name" : "Demo: Put Issue Field"
+        }
+      },
+      "visual" : {
+        "at" : { "x" : 96, "y" : 64 }
+      },
+      "connect" : [
+        { "id" : "f2", "to" : "f3" }
+      ]
+    }, {
+      "id" : "f1",
+      "type" : "TaskEnd",
+      "visual" : {
+        "at" : { "x" : 560, "y" : 64 },
+        "labelOffset" : { "x" : 13, "y" : 33 }
+      }
+    }, {
+      "id" : "f3",
+      "type" : "DialogCall",
+      "name" : "Input Form",
+      "config" : {
+        "dialog" : "com.axonivy.connector.jira.demo.PutField:start()",
+        "output" : {
+          "map" : {
+            "out" : "in",
+            "out.fields" : "result.fields",
+            "out.issueParent.key" : "result.key"
+          }
+        }
+      },
+      "visual" : {
+        "at" : { "x" : 224, "y" : 64 }
+      },
+      "connect" : [
+        { "id" : "f4", "to" : "f5", "color" : "default" }
+      ]
+    }, {
+      "id" : "f5",
+      "type" : "SubProcessCall",
+      "name" : "Put field",
+      "config" : {
+        "processCall" : "Jira/PutIssueFields:call(String,java.util.Map)",
+        "call" : {
+          "map" : {
+            "param.key" : "in.issueParent.key",
+            "param.fields" : "in.fields"
+          }
+        }
+      },
+      "visual" : {
+        "at" : { "x" : 408, "y" : 64 }
+      },
+      "connect" : [
+        { "id" : "f6", "to" : "f1", "color" : "default" }
+      ]
+    } ]
+}
