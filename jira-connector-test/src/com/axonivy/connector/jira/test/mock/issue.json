@@ -136,9 +136,15 @@
 		},
 		"components": [
 		],
-		"timeoriginalestimate": null,
+		"timeoriginalestimate": 25200,
 		"description": "Adjust template sections and font sizes to ensure the website looks clean and readable on mobile devices.",
 		"timetracking": {
+			"originalEstimate": "7h",
+			"remainingEstimate": "7h",
+			"timeSpent": "0m",
+			"originalEstimateSeconds": 25200,
+			"remainingEstimateSeconds": 25200,
+			"timeSpentSeconds": 0
 		},
 		"customfield_10015": null,
 		"security": null,
@@ -208,6 +214,6 @@
 			"total": 0,
 			"worklogs": [
 			]
-		}
+		}		
 	}
 }
