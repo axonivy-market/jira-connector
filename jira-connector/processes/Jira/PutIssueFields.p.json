@@ -8,17 +8,19 @@
   "elements" : [ {
       "id" : "f0",
       "type" : "CallSubStart",
-      "name" : "call(String,Map)",
+      "name" : "call(String,Map,Boolean)",
       "config" : {
         "signature" : "call",
         "input" : {
           "params" : [
             { "name" : "key", "type" : "String", "desc" : "key issue" },
-            { "name" : "fields", "type" : "java.util.Map", "desc" : "" }
+            { "name" : "fields", "type" : "java.util.Map", "desc" : "" },
+            { "name" : "notifyUsers", "type" : "Boolean", "desc" : "" }
           ],
           "map" : {
             "out.fields" : "param.fields",
-            "out.issueKey" : "param.key"
+            "out.issueKey" : "param.key",
+            "out.notifyUsers" : "param.notifyUsers"
           }
         }
       },
@@ -47,6 +49,9 @@
           "templateParams" : {
             "ivy.var.jira-connector.Url" : "",
             "issueKey" : "in.issueKey"
+          },
+          "queryParams" : {
+            "notifyUsers" : "in.notifyUsers"
           }
         },
         "body" : {
