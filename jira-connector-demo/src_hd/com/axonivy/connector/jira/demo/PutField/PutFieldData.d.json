@@ -19,5 +19,9 @@
     "name" : "fields",
     "type" : "java.util.Map",
     "modifiers" : [ "PERSISTENT" ]
+  }, {
+    "name" : "queryParams",
+    "type" : "String",
+    "modifiers" : [ "PERSISTENT" ]
   } ]
 }

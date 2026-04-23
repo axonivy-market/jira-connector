@@ -13,7 +13,7 @@
     "name" : "body",
     "type" : "String"
   }, {
-    "name" : "notifyUsers",
-    "type" : "Boolean"
+    "name" : "queryParams",
+    "type" : "String"
   } ]
 }
