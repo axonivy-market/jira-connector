@@ -11,7 +11,9 @@
     "type" : "java.util.Map"
   }, {
     "name" : "body",
-    "type" : "String",
-    "modifiers" : [ "PERSISTENT" ]
+    "type" : "String"
+  }, {
+    "name" : "queryParams",
+    "type" : "String"
   } ]
 }

@@ -14,11 +14,13 @@
         "result" : {
           "params" : [
             { "name" : "key", "type" : "String", "desc" : "" },
-            { "name" : "fields", "type" : "java.util.Map", "desc" : "" }
+            { "name" : "fields", "type" : "java.util.Map", "desc" : "" },
+            { "name" : "queryParams", "type" : "String", "desc" : "" }
           ],
           "map" : {
             "result.key" : "in.key",
-            "result.fields" : "in.fields"
+            "result.fields" : "in.fields",
+            "result.queryParams" : "in.queryParams"
           }
         },
         "guid" : "19D7549E16E1904E"

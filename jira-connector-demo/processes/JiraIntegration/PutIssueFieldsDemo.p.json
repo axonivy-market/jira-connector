@@ -52,7 +52,7 @@
       "type" : "SubProcessCall",
       "name" : "Put field",
       "config" : {
-        "processCall" : "Jira/PutIssueFields:call(String,java.util.Map)",
+        "processCall" : "Jira/PutIssueFields:call(String,java.util.Map,String)",
         "call" : {
           "map" : {
             "param.key" : "in.issueParent.key",
