@@ -123,8 +123,8 @@ class JiraProcessTest {
 
   @TestTemplate
   void test_putIssueFields(BpmClient bpmClient) {
-    BpmElement startable = PROCESS.PUT_ISSUE_FIELDS.elementName("call(String,Map)");
-    ExecutionResult result = bpmClient.start().subProcess(startable).execute("SCRUM-3", new HashMap<>());
+    BpmElement startable = PROCESS.PUT_ISSUE_FIELDS.elementName("call(String,Map,String)");
+    ExecutionResult result = bpmClient.start().subProcess(startable).execute("SCRUM-3", new HashMap<>(), "");
     com.axonivy.connector.jira.IssueData testData = (com.axonivy.connector.jira.IssueData) result.data().last();
     assertThat(testData.getError()).isNull();
   }
