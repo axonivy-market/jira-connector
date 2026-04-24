@@ -8,17 +8,19 @@
   "elements" : [ {
       "id" : "f0",
       "type" : "CallSubStart",
-      "name" : "call(String,Map)",
+      "name" : "call(String,Map,String)",
       "config" : {
         "signature" : "call",
         "input" : {
           "params" : [
             { "name" : "key", "type" : "String", "desc" : "key issue" },
-            { "name" : "fields", "type" : "java.util.Map", "desc" : "" }
+            { "name" : "fields", "type" : "java.util.Map", "desc" : "" },
+            { "name" : "params", "type" : "String", "desc" : "Path params" }
           ],
           "map" : {
             "out.fields" : "param.fields",
-            "out.issueKey" : "param.key"
+            "out.issueKey" : "param.key",
+            "out.queryParams" : "param.params"
           }
         },
         "result" : {
@@ -51,10 +53,11 @@
         "method" : "PUT",
         "target" : {
           "clientId" : "a5b21baf-2b4f-44ac-a9e7-9c1b0607e0a6",
-          "path" : "/issue/{issueKey}",
+          "path" : "/issue/{issueKey}{queryParams}",
           "templateParams" : {
-            "ivy.var.jira-connector.Url" : "",
-            "issueKey" : "in.issueKey"
+            "ivy.var.jiraConnector.Url" : "",
+            "issueKey" : "in.issueKey",
+            "queryParams" : "in.queryParams"
           }
         },
         "body" : {
