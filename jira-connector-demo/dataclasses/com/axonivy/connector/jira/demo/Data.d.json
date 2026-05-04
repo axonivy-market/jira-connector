@@ -31,7 +31,7 @@
     "type" : "java.util.Map",
     "modifiers" : [ "PERSISTENT" ]
   }, {
-    "name" : "queryParams",
-    "type" : "String"
+    "name" : "notifyUsers",
+    "type" : "Boolean"
   } ]
 }

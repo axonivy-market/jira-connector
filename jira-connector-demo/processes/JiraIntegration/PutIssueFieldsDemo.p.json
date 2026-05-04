@@ -37,7 +37,8 @@
           "map" : {
             "out" : "in",
             "out.fields" : "result.fields",
-            "out.issueParent.key" : "result.key"
+            "out.issueParent.key" : "result.key",
+            "out.notifyUsers" : "result.notifyUsers"
           }
         }
       },
@@ -52,11 +53,12 @@
       "type" : "SubProcessCall",
       "name" : "Put field",
       "config" : {
-        "processCall" : "Jira/PutIssueFields:call(String,java.util.Map,String)",
+        "processCall" : "Jira/PutIssueFields:call(String,java.util.Map,Boolean)",
         "call" : {
           "map" : {
             "param.key" : "in.issueParent.key",
-            "param.fields" : "in.fields"
+            "param.fields" : "in.fields",
+            "param.notifyUsers" : "in.notifyUsers"
           }
         }
       },
