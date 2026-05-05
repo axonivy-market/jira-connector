@@ -16,7 +16,7 @@
     "name" : "error",
     "type" : "ch.ivyteam.ivy.bpm.error.BpmError"
   }, {
-    "name" : "queryParams",
-    "type" : "String"
+    "name" : "notifyUsers",
+    "type" : "Boolean"
   } ]
 }
