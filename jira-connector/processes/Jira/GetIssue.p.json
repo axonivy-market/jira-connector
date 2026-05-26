@@ -1,5 +1,5 @@
 {
-  "$schema" : "https://json-schema.axonivy.com/process/13.2.0/process.json",
+  "$schema" : "https://json-schema.axonivy.com/14.0-dev/project/process.json",
   "id" : "17CFE858669C1C22",
   "kind" : "CALLABLE_SUB",
   "config" : {
@@ -49,7 +49,7 @@
       "name" : "Get Issue",
       "config" : {
         "target" : {
-          "clientId" : "a5b21baf-2b4f-44ac-a9e7-9c1b0607e0a6",
+          "clientId" : "Jira",
           "path" : "/issue/{key}",
           "templateParams" : {
             "key" : "in.issueParent.key"

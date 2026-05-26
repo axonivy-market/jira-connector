@@ -1,16 +1,18 @@
 {
-  "$schema" : "https://json-schema.axonivy.com/data-class/13.1.0/data-class.json",
+  "$schema" : "https://json-schema.axonivy.com/14.0-dev/project/data-class.json",
   "simpleName" : "ProjectData",
   "namespace" : "com.axonivy.connector.jira",
-  "isBusinessCaseData" : false,
   "fields" : [ {
     "name" : "searchRequest",
-    "type" : "com.axonivy.connector.jira.models.SearchProjectRequest"
+    "type" : "com.axonivy.connector.jira.models.SearchProjectRequest",
+    "modifiers" : [ ]
   }, {
     "name" : "searchResponse",
-    "type" : "com.axonivy.connector.jira.models.SearchProjectResponse"
+    "type" : "com.axonivy.connector.jira.models.SearchProjectResponse",
+    "modifiers" : [ ]
   }, {
     "name" : "error",
-    "type" : "ch.ivyteam.ivy.bpm.error.BpmError"
+    "type" : "ch.ivyteam.ivy.bpm.error.BpmError",
+    "modifiers" : [ ]
   } ]
 }

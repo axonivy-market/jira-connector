@@ -1,12 +1,14 @@
+# yaml-language-server: $schema=https://json-schema.axonivy.com/14.0-dev/config/rest-clients-1.json
 RestClients:
   Jira:
-    UUID: a5b21baf-2b4f-44ac-a9e7-9c1b0607e0a6
+    Name: Jira
     Url: ${ivy.var.jiraConnector.Url}
     Icon: res:/webContent/icons/jira.png
     Features:
-    - ch.ivyteam.ivy.rest.client.mapper.JsonFeature
-    - ch.ivyteam.ivy.rest.client.authentication.HttpBasicAuthenticationFeature
+      - ch.ivyteam.ivy.rest.client.mapper.JsonFeature
+      - ch.ivyteam.ivy.rest.client.authentication.HttpBasicAuthenticationFeature
     Properties:
       username: ${ivy.var.jiraConnector.Username}
       password: ${ivy.var.jiraConnector.Password}
+    LegacyUUID: a5b21baf-2b4f-44ac-a9e7-9c1b0607e0a6
 

@@ -1,5 +1,5 @@
 {
-  "$schema" : "https://json-schema.axonivy.com/process/13.2.0/process.json",
+  "$schema" : "https://json-schema.axonivy.com/14.0-dev/project/process.json",
   "id" : "192471817E472F6F",
   "kind" : "CALLABLE_SUB",
   "config" : {
@@ -54,7 +54,7 @@
       "config" : {
         "method" : "DELETE",
         "target" : {
-          "clientId" : "a5b21baf-2b4f-44ac-a9e7-9c1b0607e0a6",
+          "clientId" : "Jira",
           "path" : "/issue/{key}/worklog/{id}",
           "templateParams" : {
             "key" : "in.issueParent.key",
