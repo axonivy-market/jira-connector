@@ -1,40 +1,46 @@
 {
-  "$schema" : "https://json-schema.axonivy.com/data-class/13.1.0/data-class.json",
+  "$schema" : "https://json-schema.axonivy.com/14.0-dev/project/data-class.json",
   "simpleName" : "Data",
   "namespace" : "com.axonivy.connector.jira",
-  "isBusinessCaseData" : false,
   "fields" : [ {
     "name" : "issueParent",
-    "type" : "com.axonivy.connector.jira.models.IssueParent"
+    "type" : "com.axonivy.connector.jira.models.IssueParent",
+    "modifiers" : [ ]
   }, {
     "name" : "comment",
-    "type" : "String"
+    "modifiers" : [ ]
   }, {
     "name" : "jsonString",
-    "type" : "String"
+    "modifiers" : [ ]
   }, {
     "name" : "workLog",
-    "type" : "com.axonivy.connector.jira.models.WorkLog"
+    "type" : "com.axonivy.connector.jira.models.WorkLog",
+    "modifiers" : [ ]
   }, {
     "name" : "issueWorkLogs",
-    "type" : "com.axonivy.connector.jira.models.IssueWorkLogs"
+    "type" : "com.axonivy.connector.jira.models.IssueWorkLogs",
+    "modifiers" : [ ]
   }, {
     "name" : "workLogIds",
-    "type" : "List<String>"
+    "type" : "List<String>",
+    "modifiers" : [ ]
   }, {
     "name" : "searchIssue",
-    "type" : "com.axonivy.connector.jira.models.SearchIssue"
+    "type" : "com.axonivy.connector.jira.models.SearchIssue",
+    "modifiers" : [ ]
   }, {
     "name" : "searchIssueResult",
-    "type" : "com.axonivy.connector.jira.models.SearchIssueResult"
+    "type" : "com.axonivy.connector.jira.models.SearchIssueResult",
+    "modifiers" : [ ]
   }, {
     "name" : "adjustEstimate",
-    "type" : "String"
+    "modifiers" : [ ]
   }, {
     "name" : "notifyUsers",
-    "type" : "String"
+    "modifiers" : [ ]
   }, {
     "name" : "error",
-    "type" : "ch.ivyteam.ivy.bpm.error.BpmError"
+    "type" : "ch.ivyteam.ivy.bpm.error.BpmError",
+    "modifiers" : [ ]
   } ]
 }
