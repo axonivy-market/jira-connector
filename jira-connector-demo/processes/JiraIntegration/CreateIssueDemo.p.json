@@ -54,11 +54,11 @@
       "type" : "SubProcessCall",
       "name" : "Jira/CreateIssue",
       "config" : {
-        "processCall" : "Jira/CreateIssue:call(String,String,String,String)",
+        "processCall" : "Jira/CreateIssue:call(String,String,String,String,String,String)",
         "call" : {
           "map" : {
             "param.projectKey" : "in.issueParent.fields.project.projKey",
-            "param.issueType" : "in.issueParent.fields.issuetype.name",
+            "param.issueType" : "in.issueParent.fields.issuetype.id",
             "param.summary" : "in.issueParent.fields.summary",
             "param.description" : "in.issueParent.fields.description"
           }

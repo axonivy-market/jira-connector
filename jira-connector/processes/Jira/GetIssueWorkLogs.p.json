@@ -48,9 +48,18 @@
       "config" : {
         "target" : {
           "clientId" : "a5b21baf-2b4f-44ac-a9e7-9c1b0607e0a6",
-          "path" : "/issue/{key}/worklog",
+          "path" : "/rest/api/2/issue/{issueIdOrKey}/worklog",
           "templateParams" : {
-            "key" : "in.issueParent.key"
+            "issueIdOrKey" : "in.issueParent.key",
+            "ivy.var.jira-connector.Url" : "",
+            "key" : ""
+          },
+          "queryParams" : {
+            "startAt" : "",
+            "maxResults" : "",
+            "startedAfter" : "",
+            "startedBefore" : "",
+            "expand" : ""
           }
         },
         "response" : {
