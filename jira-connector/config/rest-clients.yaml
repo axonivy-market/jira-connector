@@ -1,5 +1,7 @@
+# yaml-language-server: $schema=https://json-schema.axonivy.com/app/12.0.0/rest-clients.json
 RestClients:
-  Jira:
+  #Jira Cloud platform REST API documentation
+  Jira (The Jira Cloud platform REST API):
     UUID: a5b21baf-2b4f-44ac-a9e7-9c1b0607e0a6
     Url: ${ivy.var.jira-connector.Url}
     Icon: res:/webContent/icons/jira.png
@@ -9,4 +11,6 @@ RestClients:
     Properties:
       username: ${ivy.var.jira-connector.Username}
       password: ${ivy.var.jira-connector.Password}
-
+    OpenAPI:
+      SpecUrl: https://developer.atlassian.com/cloud/jira/platform/swagger.v3.json
+      Namespace: net.atlassian.api.v2.client

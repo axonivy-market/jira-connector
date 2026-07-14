@@ -6,91 +6,16 @@
     "data" : "com.axonivy.connector.jira.Data"
   },
   "elements" : [ {
-      "id" : "f0",
-      "type" : "CallSubStart",
-      "name" : "call(String,WorkLog)",
-      "config" : {
-        "signature" : "call",
-        "input" : {
-          "params" : [
-            { "name" : "issueIdOrKey", "type" : "String", "desc" : "" },
-            { "name" : "workLog", "type" : "com.axonivy.connector.jira.models.WorkLog", "desc" : "" }
-          ],
-          "map" : {
-            "out.issueParent.key" : "param.issueIdOrKey",
-            "out.workLog" : "param.workLog"
-          }
-        },
-        "result" : {
-          "params" : [
-            { "name" : "workLog", "type" : "com.axonivy.connector.jira.models.WorkLog", "desc" : "" }
-          ],
-          "map" : {
-            "result.workLog" : "in.workLog"
-          }
-        }
-      },
-      "visual" : {
-        "at" : { "x" : 96, "y" : 64 },
-        "labelOffset" : { "x" : 34, "y" : 37 }
-      },
-      "connect" : [
-        { "id" : "f4", "to" : "f3" }
-      ]
-    }, {
-      "id" : "f1",
-      "type" : "CallSubEnd",
-      "visual" : {
-        "at" : { "x" : 536, "y" : 64 }
-      }
-    }, {
-      "id" : "f3",
-      "type" : "RestClientCall",
-      "name" : "Create Work log",
-      "config" : {
-        "method" : "POST",
-        "target" : {
-          "clientId" : "a5b21baf-2b4f-44ac-a9e7-9c1b0607e0a6",
-          "path" : "/issue/{issueIdOrKey}/worklog",
-          "templateParams" : {
-            "issueIdOrKey" : "in.issueParent.key",
-            "ivy.var.jira-connector.Url" : ""
-          }
-        },
-        "body" : {
-          "entity" : {
-            "type" : "com.axonivy.connector.jira.models.WorkLog",
-            "map" : {
-              "param" : "in.workLog"
-            }
-          }
-        },
-        "response" : {
-          "entity" : {
-            "type" : "com.axonivy.connector.jira.models.WorkLog",
-            "map" : {
-              "out.workLog" : "result"
-            }
-          }
-        }
-      },
-      "visual" : {
-        "at" : { "x" : 352, "y" : 64 }
-      },
-      "connect" : [
-        { "id" : "f2", "to" : "f1" }
-      ]
-    }, {
       "id" : "f5",
       "type" : "CallSubStart",
-      "name" : "callWithNotification(String,WorkLog,String)",
+      "name" : "callWithNotification(String,WorkLog,Boolean)",
       "config" : {
         "signature" : "callWithNotification",
         "input" : {
           "params" : [
             { "name" : "issueIdOrKey", "type" : "String", "desc" : "" },
             { "name" : "workLog", "type" : "com.axonivy.connector.jira.models.WorkLog", "desc" : "" },
-            { "name" : "notifyUsers", "type" : "String", "desc" : "" }
+            { "name" : "notifyUsers", "type" : "Boolean", "desc" : "" }
           ],
           "map" : {
             "out.issueParent.key" : "param.issueIdOrKey",
@@ -115,6 +40,12 @@
         { "id" : "f8", "to" : "f6" }
       ]
     }, {
+      "id" : "f7",
+      "type" : "CallSubEnd",
+      "visual" : {
+        "at" : { "x" : 536, "y" : 176 }
+      }
+    }, {
       "id" : "f6",
       "type" : "RestClientCall",
       "name" : "Create Work log",
@@ -122,13 +53,18 @@
         "method" : "POST",
         "target" : {
           "clientId" : "a5b21baf-2b4f-44ac-a9e7-9c1b0607e0a6",
-          "path" : "/issue/{issueIdOrKey}/worklog",
+          "path" : "/rest/api/2/issue/{issueIdOrKey}/worklog",
           "templateParams" : {
-            "ivy.var.jira-connector.Url" : "",
-            "issueIdOrKey" : "in.issueParent.key"
+            "issueIdOrKey" : "in.issueParent.key",
+            "ivy.var.jira-connector.Url" : ""
           },
           "queryParams" : {
-            "notifyUsers" : "in.notifyUsers"
+            "notifyUsers" : "in.notifyUsers",
+            "adjustEstimate" : "",
+            "newEstimate" : "",
+            "reduceBy" : "",
+            "expand" : "",
+            "overrideEditableFlag" : ""
           }
         },
         "body" : {
@@ -154,11 +90,5 @@
       "connect" : [
         { "id" : "f9", "to" : "f7" }
       ]
-    }, {
-      "id" : "f7",
-      "type" : "CallSubEnd",
-      "visual" : {
-        "at" : { "x" : 536, "y" : 176 }
-      }
     } ]
 }
