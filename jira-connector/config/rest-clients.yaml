@@ -13,4 +13,4 @@ RestClients:
       password: ${ivy.var.jira-connector.Password}
     OpenAPI:
       SpecUrl: https://developer.atlassian.com/cloud/jira/platform/swagger.v3.json
-      Namespace: net.atlassian.your.domain.client
+      Namespace: net.atlassian.api.v2.client
