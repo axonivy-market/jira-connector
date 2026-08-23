@@ -16,7 +16,7 @@
             { "name" : "issueKey", "type" : "String", "desc" : "Issue Key" }
           ],
           "map" : {
-            "out.issueParent.key" : "param.issueKey"
+            "out.issueKey" : "param.issueKey"
           }
         },
         "result" : {
@@ -48,9 +48,19 @@
       "config" : {
         "target" : {
           "clientId" : "a5b21baf-2b4f-44ac-a9e7-9c1b0607e0a6",
-          "path" : "/issue/{key}",
+          "path" : "/rest/api/2/issue/{issueIdOrKey}",
           "templateParams" : {
-            "key" : "in.issueParent.key"
+            "issueIdOrKey" : "in.issueKey",
+            "ivy.var.jira-connector.Url" : "",
+            "key" : ""
+          },
+          "queryParams" : {
+            "fields" : "",
+            "fieldsByKeys" : "",
+            "expand" : "",
+            "properties" : "",
+            "updateHistory" : "",
+            "failFast" : ""
           }
         },
         "response" : {

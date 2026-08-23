@@ -19,7 +19,7 @@ import io.swagger.v3.oas.annotations.Hidden;
 public class JiraServiceMock {
 
   @GET
-  @Path("issue/{issueKey}")
+  @Path("rest/api/2/issue/{issueKey}")
   @Produces(MediaType.APPLICATION_JSON)
   public Response readIssue(@PathParam("issueKey") String issueKey) {
     return Response.status(200)

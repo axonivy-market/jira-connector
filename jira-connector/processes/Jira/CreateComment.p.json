@@ -43,9 +43,14 @@
         "method" : "POST",
         "target" : {
           "clientId" : "a5b21baf-2b4f-44ac-a9e7-9c1b0607e0a6",
-          "path" : "issue/{key}/comment",
+          "path" : "/rest/api/2/issue/{issueIdOrKey}/comment",
           "templateParams" : {
-            "key" : "in.issueParent.key"
+            "issueIdOrKey" : "in.issueParent.key",
+            "ivy.var.jira-connector.Url" : "",
+            "key" : ""
+          },
+          "queryParams" : {
+            "expand" : ""
           }
         },
         "body" : {
@@ -54,6 +59,11 @@
             "map" : {
               "param.body" : "in.comment"
             }
+          }
+        },
+        "response" : {
+          "entity" : {
+            "type" : "com.axonivy.connector.jira.models.Comment"
           }
         }
       },

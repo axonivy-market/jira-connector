@@ -1,0 +1,12 @@
+{
+  "$schema" : "https://json-schema.axonivy.com/data-class/12.0.0/data-class.json",
+  "simpleName" : "GetUsersData",
+  "namespace" : "com.axonivy.connector.jira",
+  "fields" : [ {
+    "name" : "projectKey",
+    "type": "String"
+  }, {
+    "name" : "users",
+    "type" : "List<com.axonivy.connector.jira.models.User>"
+  } ]
+}
