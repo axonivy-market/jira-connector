@@ -1,0 +1,13 @@
+{
+  "$schema" : "https://json-schema.axonivy.com/14.0-dev/project/data-class.json",
+  "simpleName" : "CreateWorkLogData",
+  "namespace" : "com.axonivy.connector.jira.demo.CreateWorkLog",
+  "fields" : [ {
+    "name" : "workLog",
+    "type" : "com.axonivy.connector.jira.models.WorkLog",
+    "modifiers" : [ ]
+  }, {
+    "name" : "issueKey",
+    "modifiers" : [ ]
+  } ]
+}

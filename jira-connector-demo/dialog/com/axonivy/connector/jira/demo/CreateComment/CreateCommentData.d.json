@@ -1,0 +1,12 @@
+{
+  "$schema" : "https://json-schema.axonivy.com/14.0-dev/project/data-class.json",
+  "simpleName" : "CreateCommentData",
+  "namespace" : "com.axonivy.connector.jira.demo.CreateComment",
+  "fields" : [ {
+    "name" : "key",
+    "modifiers" : [ ]
+  }, {
+    "name" : "comment",
+    "modifiers" : [ ]
+  } ]
+}

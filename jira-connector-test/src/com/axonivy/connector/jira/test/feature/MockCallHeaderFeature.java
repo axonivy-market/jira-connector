@@ -2,10 +2,10 @@ package com.axonivy.connector.jira.test.feature;
 
 import java.io.IOException;
 
-import javax.ws.rs.client.ClientRequestContext;
-import javax.ws.rs.client.ClientRequestFilter;
-import javax.ws.rs.core.Feature;
-import javax.ws.rs.core.FeatureContext;
+import jakarta.ws.rs.client.ClientRequestContext;
+import jakarta.ws.rs.client.ClientRequestFilter;
+import jakarta.ws.rs.core.Feature;
+import jakarta.ws.rs.core.FeatureContext;
 
 public class MockCallHeaderFeature implements Feature {
 	private static final String REQUESTED_BY = "X-Requested-By";
