@@ -1,5 +1,5 @@
 {
-  "$schema" : "https://json-schema.axonivy.com/14.0-dev/project/process-2.json",
+  "$schema" : "https://json-schema.axonivy.com/14.0/project/process.json",
   "id" : "1924633C0A3D0151",
   "config" : {
     "data" : "com.axonivy.connector.jira.demo.Data"
