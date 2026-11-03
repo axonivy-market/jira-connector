@@ -1,0 +1,87 @@
+{
+  "$schema" : "https://json-schema.axonivy.com/process/12.0.0/process.json",
+  "id" : "19EFCA52EC0EB31C",
+  "kind" : "CALLABLE_SUB",
+  "config" : {
+    "data" : "com.axonivy.connector.jira.GetUsersData"
+  },
+  "elements" : [ {
+      "id" : "f0",
+      "type" : "CallSubStart",
+      "name" : "call(String)",
+      "config" : {
+        "signature" : "call",
+        "input" : {
+          "params" : [
+            { "name" : "projectKey", "type" : "String", "desc" : "" }
+          ],
+          "map" : {
+            "out.projectKey" : "param.projectKey"
+          }
+        },
+        "result" : {
+          "params" : [
+            { "name" : "users", "type" : "List<com.axonivy.connector.jira.models.User>", "desc" : "" }
+          ],
+          "map" : {
+            "result.users" : "in.users"
+          }
+        }
+      },
+      "visual" : {
+        "at" : { "x" : 96, "y" : 64 }
+      },
+      "connect" : [
+        { "id" : "f2", "to" : "f3" }
+      ]
+    }, {
+      "id" : "f1",
+      "type" : "CallSubEnd",
+      "visual" : {
+        "at" : { "x" : 352, "y" : 64 },
+        "labelOffset" : { "x" : 13, "y" : 33 }
+      }
+    }, {
+      "id" : "f3",
+      "type" : "RestClientCall",
+      "name" : "Jira (The Jira Cloud platform REST API)",
+      "config" : {
+        "target" : {
+          "clientId" : "a5b21baf-2b4f-44ac-a9e7-9c1b0607e0a6",
+          "path" : "/rest/api/2/user/assignable/search",
+          "templateParams" : {
+            "ivy.var.jira-connector.Url" : ""
+          },
+          "queryParams" : {
+            "query" : "",
+            "sessionId" : "",
+            "username" : "",
+            "accountId" : "",
+            "project" : "in.projectKey",
+            "issueKey" : "",
+            "issueId" : "",
+            "startAt" : "",
+            "maxResults" : "",
+            "actionDescriptorId" : "",
+            "recommend" : "",
+            "accountType" : "",
+            "appType" : ""
+          }
+        },
+        "response" : {
+          "entity" : {
+            "type" : "List<com.axonivy.connector.jira.models.User>",
+            "map" : {
+              "out.users" : "result"
+            }
+          }
+        }
+      },
+      "visual" : {
+        "at" : { "x" : 224, "y" : 64 }
+      },
+      "connect" : [
+        { "id" : "f4", "to" : "f1", "color" : "default" }
+      ]
+    } ]
+}

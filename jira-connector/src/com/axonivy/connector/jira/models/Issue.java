@@ -5,118 +5,150 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Issue {
-	
+
 	@JsonProperty("id")
 	@JsonInclude(Include.NON_NULL)
 	private String id;
-	
+
 	@JsonProperty("project")
 	private Project project = new Project();
-	
+
+	@JsonProperty("parent")
+	private Parent parent = new Parent();
+
+	@JsonProperty("assignee")
+	private JiraObject assignee = new JiraObject();
+
 	@JsonProperty("summary")
 	private String summary;
-	
+
 	@JsonProperty("description")
 	private String description;
-	
+
 	@JsonProperty("issuetype")
 	@JsonInclude(Include.NON_NULL)
 	private Issuetype issuetype = new Issuetype();
-	
+
 	@JsonProperty("key")
 	@JsonInclude(Include.NON_NULL)
 	private String key;
-	
+
 	@JsonProperty("status")
 	@JsonInclude(Include.NON_NULL)
 	private Status status;
-	
+
 	@JsonProperty("reporter")
 	@JsonInclude(Include.NON_NULL)
 	private Reporter reporter;
-	
+
 	@JsonProperty("comment")
 	@JsonInclude(Include.NON_NULL)
 	private CommentList commentList;
-	
+
 	@JsonProperty("timetracking")
 	@JsonInclude(Include.NON_NULL)
 	private TimeTracking timeTracking;
-	
+
 	@JsonProperty("timeoriginalestimate")
 	private Long timeOriginalEstimate;
 
 	public Project getProject() {
 		return project;
 	}
+
 	public void setProject(Project project) {
 		this.project = project;
 	}
-	
+
 	public String getSummary() {
 		return summary;
 	}
-	
+
 	public void setSummary(String summary) {
 		this.summary = summary;
 	}
+
 	public String getDescription() {
 		return description;
 	}
+
 	public void setDescription(String description) {
 		this.description = description;
 	}
+
 	public Issuetype getIssuetype() {
 		return issuetype;
 	}
+
 	public void setIssuetype(Issuetype issuetype) {
 		this.issuetype = issuetype;
 	}
+
 	public String getKey() {
 		return key;
 	}
+
 	public void setKey(String key) {
 		this.key = key;
 	}
+
 	public Status getStatus() {
 		return status;
 	}
+
 	public void setStatus(Status status) {
 		this.status = status;
 	}
-	
+
 	public Reporter getReporter() {
 		return reporter;
 	}
-	
+
 	public void setReporter(Reporter reporter) {
 		this.reporter = reporter;
 	}
-	
+
 	public CommentList getCommentList() {
 		return commentList;
 	}
-	
+
 	public void setCommentList(CommentList commentList) {
 		this.commentList = commentList;
 	}
-	
+
 	public TimeTracking getTimeTracking() {
 		return timeTracking;
 	}
-	
+
 	public void setTimeTracking(TimeTracking timeTracking) {
 		this.timeTracking = timeTracking;
 	}
-	
+
 	public Long getTimeOriginalEstimate() {
 		return timeOriginalEstimate;
 	}
 
 	public void setTimeOriginalEstimate(Long timeOriginalEstimate) {
 		this.timeOriginalEstimate = timeOriginalEstimate;
+	}
+
+	public Parent getParent() {
+		return parent;
+	}
+
+	public void setParent(Parent parent) {
+		this.parent = parent;
+	}
+
+	public JiraObject getAssignee() {
+		return assignee;
+	}
+
+	public void setAssignee(JiraObject assignee) {
+		this.assignee = assignee;
 	}
 
 }

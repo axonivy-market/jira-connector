@@ -55,7 +55,7 @@
       "type" : "SubProcessCall",
       "name" : "Jira/CreateWorkLog",
       "config" : {
-        "processCall" : "Jira/CreateWorkLog:call(String,com.axonivy.connector.jira.models.WorkLog)",
+        "processCall" : "Jira/CreateWorkLog:callWithNotification(String,com.axonivy.connector.jira.models.WorkLog,Boolean)",
         "call" : {
           "map" : {
             "param.issueIdOrKey" : "in.issueParent.key",

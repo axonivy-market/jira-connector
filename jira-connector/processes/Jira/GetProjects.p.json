@@ -48,16 +48,24 @@
       "config" : {
         "target" : {
           "clientId" : "a5b21baf-2b4f-44ac-a9e7-9c1b0607e0a6",
-          "path" : "/project/search",
+          "path" : "/rest/api/2/project/search",
           "templateParams" : {
             "ivy.var.jira-connector.Url" : ""
           },
           "queryParams" : {
+            "startAt" : "in.searchRequest.startAt",
             "maxResults" : "in.searchRequest.maxResults",
             "orderBy" : "in.searchRequest.orderBy",
-            "properties" : "in.searchRequest.properties",
-            "startAt" : "in.searchRequest.startAt",
-            "status" : "in.searchRequest.status"
+            "id" : "",
+            "keys" : "in.searchRequest.properties",
+            "query" : "",
+            "typeKey" : "",
+            "categoryId" : "",
+            "action" : "",
+            "expand" : "",
+            "status" : "in.searchRequest.status",
+            "properties" : "",
+            "propertyQuery" : ""
           }
         },
         "response" : {

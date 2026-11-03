@@ -45,18 +45,28 @@
         "method" : "PUT",
         "target" : {
           "clientId" : "a5b21baf-2b4f-44ac-a9e7-9c1b0607e0a6",
-          "path" : "/issue/{issueKey}",
+          "path" : "/rest/api/2/issue/{issueIdOrKey}",
           "templateParams" : {
+            "issueIdOrKey" : "in.issueKey",
             "ivy.var.jira-connector.Url" : "",
-            "issueKey" : "in.issueKey"
+            "issueKey" : ""
           },
           "queryParams" : {
-            "notifyUsers" : "in.notifyUsers"
+            "notifyUsers" : "in.notifyUsers",
+            "overrideScreenSecurity" : "",
+            "overrideEditableFlag" : "",
+            "returnIssue" : "",
+            "expand" : ""
           }
         },
         "body" : {
-          "type" : "RAW",
-          "raw" : "<%=in.body %>"
+          "raw" : "<%=in.body %>",
+          "entity" : {
+            "type" : "String",
+            "map" : {
+              "param" : "in.body"
+            }
+          }
         }
       },
       "visual" : {
