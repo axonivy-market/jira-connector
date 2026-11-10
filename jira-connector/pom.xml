@@ -4,7 +4,7 @@
   <parent>
     <groupId>com.axonivy.ivy.api</groupId>
     <artifactId>ivy-project-parent</artifactId>
-    <version>14.0.0</version>
+    <version>14.0.2-SNAPSHOT</version>
     <relativePath />
   </parent>
   <groupId>com.axonivy.connector.jira</groupId>
@@ -48,6 +48,9 @@
         <groupId>com.axonivy.ivy.ci</groupId>
         <artifactId>project-build-plugin</artifactId>
         <extensions>true</extensions>
+        <configuration>
+          <skipComponentsReport>false</skipComponentsReport>
+        </configuration>
       </plugin>
     </plugins>
   </build>
