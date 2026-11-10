@@ -15,5 +15,12 @@
                 <include>**/*.png</include>
             </includes>
         </fileSet>
+        <fileSet>
+            <directory>../jira-connector/target</directory>
+            <outputDirectory>/</outputDirectory>
+            <includes>
+                <include>components/*.json</include>
+            </includes>
+        </fileSet>
     </fileSets>
 </assembly>
