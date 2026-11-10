@@ -1,0 +1,14 @@
+{
+  "$schema" : "https://json-schema.axonivy.com/14.0/project/data-class.json",
+  "simpleName" : "Data",
+  "namespace" : "com.axonivy.connector.jira.test",
+  "fields" : [ {
+    "name" : "issueParent",
+    "type" : "com.axonivy.connector.jira.models.IssueParent",
+    "modifiers" : [ ]
+  }, {
+    "name" : "comment"
+  }, {
+    "name" : "jsonString"
+  } ]
+}
