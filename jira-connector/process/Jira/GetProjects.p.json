@@ -30,9 +30,13 @@
           }
         }
       },
+      "tags" : [
+        "CONNECTOR"
+      ],
       "visual" : {
         "at" : { "x" : 96, "y" : 64 },
-        "labelOffset" : { "x" : 29, "y" : 37 }
+        "labelOffset" : { "x" : 29, "y" : 37 },
+        "icon" : "res:/webContent/icons/jira.png"
       },
       "connect" : [
         { "id" : "f3", "to" : "f2" }
