@@ -1,0 +1,46 @@
+{
+  "$schema" : "https://json-schema.axonivy.com/14.0/project/data-class.json",
+  "simpleName" : "Data",
+  "namespace" : "com.axonivy.connector.jira",
+  "fields" : [ {
+    "name" : "issueParent",
+    "type" : "com.axonivy.connector.jira.models.IssueParent",
+    "modifiers" : [ ]
+  }, {
+    "name" : "comment",
+    "modifiers" : [ ]
+  }, {
+    "name" : "jsonString",
+    "modifiers" : [ ]
+  }, {
+    "name" : "workLog",
+    "type" : "com.axonivy.connector.jira.models.WorkLog",
+    "modifiers" : [ ]
+  }, {
+    "name" : "issueWorkLogs",
+    "type" : "com.axonivy.connector.jira.models.IssueWorkLogs",
+    "modifiers" : [ ]
+  }, {
+    "name" : "workLogIds",
+    "type" : "List<String>",
+    "modifiers" : [ ]
+  }, {
+    "name" : "searchIssue",
+    "type" : "com.axonivy.connector.jira.models.SearchIssue",
+    "modifiers" : [ ]
+  }, {
+    "name" : "searchIssueResult",
+    "type" : "com.axonivy.connector.jira.models.SearchIssueResult",
+    "modifiers" : [ ]
+  }, {
+    "name" : "adjustEstimate",
+    "modifiers" : [ ]
+  }, {
+    "name" : "notifyUsers",
+    "modifiers" : [ ]
+  }, {
+    "name" : "error",
+    "type" : "ch.ivyteam.ivy.bpm.error.BpmError",
+    "modifiers" : [ ]
+  } ]
+}

@@ -1,0 +1,24 @@
+{
+  "$schema" : "https://json-schema.axonivy.com/14.0/project/data-class.json",
+  "simpleName" : "IssueData",
+  "namespace" : "com.axonivy.connector.jira",
+  "fields" : [ {
+    "name" : "issueKey",
+    "modifiers" : [ ]
+  }, {
+    "name" : "fields",
+    "type" : "java.util.Map",
+    "modifiers" : [ ]
+  }, {
+    "name" : "body",
+    "modifiers" : [ ]
+  }, {
+    "name" : "error",
+    "type" : "ch.ivyteam.ivy.bpm.error.BpmError",
+    "modifiers" : [ ]
+  }, {
+    "name" : "notifyUsers",
+    "type" : "Boolean",
+    "modifiers" : [ ]
+  } ]
+}
