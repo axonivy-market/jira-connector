@@ -32,8 +32,12 @@
           }
         }
       },
+      "tags" : [
+        "CONNECTOR"
+      ],
       "visual" : {
-        "at" : { "x" : 96, "y" : 64 }
+        "at" : { "x" : 96, "y" : 64 },
+        "icon" : "res:/webContent/icons/jira.png"
       },
       "connect" : [
         { "id" : "f2", "to" : "f5" }
